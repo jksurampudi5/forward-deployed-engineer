@@ -1,22 +1,25 @@
-# GSD Project State: Forward Deployed Engineer (FDE) Track
+# GSD Project State: Forward Deployed Engineer (FDE) & Applied AI Track
 
-**Objective:** FDE Zero-to-Hire Implementation Portfolio & Live GitHub Pages Tracker
-**Status:** 🟢 Live Tracker Built & Ready to Deploy
-**Current Focus:** Pushing to GitHub and launching GitHub Pages live tracking
-**Updated:** 2026-11-13
+**Objective:** Complete Master Curriculum (LLMs, Advanced RAG, Agentic AI, Real-Time Systems, Evals) & Live GitHub Pages Tracker
+**Status:** 🟢 Live Interactive Dashboard & Master Syllabus Expanded
+**Current Focus:** Ready to commit & push to GitHub Pages; Begin Milestone 1
+**Updated:** 2026-11-14
 
 ---
 
 ## 📋 Active Tasks & Next Steps
-1. [x] Built interactive tracking dashboard with local storage persistence ([index.html](file:///Users/jayakrishna/Desktop/rev_eng/index.html))
-2. [x] Created automated GitHub Pages CI/CD workflow ([.github/workflows/deploy.yml](file:///Users/jayakrishna/Desktop/rev_eng/.github/workflows/deploy.yml))
-3. [x] Generated GitHub setup guide & repository documentation ([README.md](file:///Users/jayakrishna/Desktop/rev_eng/README.md))
-4. [ ] Push to GitHub repository and activate GitHub Pages (Instructions in README.md)
-5. [ ] Begin **Pillar 1 / Milestone 1** implementation: Core Backend & Data Ingestion Engine
+1. [x] Comprehensive LLM, RAG, Agentic AI & Real-Time curriculum authored ([FDE_CURRICULUM_AND_ROADMAP.md](file:///Users/jayakrishna/Desktop/rev_eng/FDE_CURRICULUM_AND_ROADMAP.md))
+2. [x] Interactive live dashboard updated with full AI concept cards, category filters, and study links ([index.html](file:///Users/jayakrishna/Desktop/rev_eng/index.html))
+3. [x] GitHub Actions deployment workflow active ([.github/workflows/deploy.yml](file:///Users/jayakrishna/Desktop/rev_eng/.github/workflows/deploy.yml))
+4. [ ] Commit and push changes to trigger automated GitHub Pages live rebuild
+5. [ ] Choose first implementation milestone:
+   - **Milestone 1**: Data Pipeline & Business Ontology Engine (Python, DuckDB, Postgres, FastAPI)
+   - **Milestone 2**: Enterprise RAG with Hybrid Search, Cohere Re-Ranking & RBAC (pgvector, Qdrant, Ragas)
+   - **Milestone 3**: Autonomous Multi-Agent System with LangGraph & Model Context Protocol (MCP)
 
 ## 📌 Milestone Progress
-- [x] **Milestone 0: Live Tracker Dashboard & CI/CD Setup** (Completed)
-- [ ] **Milestone 1: Backend & Data Pipeline (Ontology Engine)**
-- [ ] **Milestone 2: Applied AI & Enterprise RAG System**
-- [ ] **Milestone 3: High-Throughput Webhook & Observability Gateway**
-- [ ] **Milestone 4: Full-Stack FDE Operations Dashboard & K8s Deployment**
+- [x] **Milestone 0: Interactive Live Tracker & Complete Syllabus** (Completed)
+- [ ] **Milestone 1: Backend & Data Ingestion (Ontology Engine)**
+- [ ] **Milestone 2: Production Enterprise RAG & Hybrid Search**
+- [ ] **Milestone 3: Agentic AI, Memory & Multi-Agent Orchestration**
+- [ ] **Milestone 4: Real-Time Streaming, Evals & Full-Stack Deployment**

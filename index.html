@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forward Deployed Engineer (FDE) — Roadmap & Live Tracker</title>
+  <title>Applied AI, LLMs, RAG & Agentic Systems — Master Tracker</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -39,18 +39,18 @@
   <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 text-white font-bold text-xl">
-          <i class="fa-solid fa-compass"></i>
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-pink-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 text-white font-bold text-xl">
+          <i class="fa-solid fa-brain"></i>
         </div>
         <div>
           <h1 class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-indigo-300 bg-clip-text text-transparent">
-            Forward Deployed Engineer Tracker
+            Applied AI & Forward Deployed Engineer Tracker
           </h1>
-          <p class="text-xs text-slate-400">Zero-to-Hire Curriculum, Free Courses & Portfolio Milestones</p>
+          <p class="text-xs text-slate-400">LLMs, Advanced RAG, Agentic AI, Real-Time Systems & Production Deployments</p>
         </div>
       </div>
 
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2.5">
         <button id="exportBtn" class="px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg transition-colors flex items-center gap-1.5">
           <i class="fa-solid fa-download"></i> Export Progress
         </button>
@@ -68,14 +68,14 @@
   <!-- Progress Bar & Quick Stats -->
   <section class="border-b border-slate-800/80 bg-slate-900/40 py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         
         <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-4">
           <div class="w-12 h-12 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl">
             <i class="fa-solid fa-chart-pie"></i>
           </div>
           <div>
-            <div class="text-xs text-slate-400">Overall Progress</div>
+            <div class="text-xs text-slate-400">Overall Mastery</div>
             <div class="text-2xl font-bold text-white" id="statPercentage">0%</div>
           </div>
         </div>
@@ -85,24 +85,24 @@
             <i class="fa-solid fa-circle-check"></i>
           </div>
           <div>
-            <div class="text-xs text-slate-400">Concepts Completed</div>
+            <div class="text-xs text-slate-400">Topics Mastered</div>
             <div class="text-2xl font-bold text-white" id="statCompleted">0 / 0</div>
           </div>
         </div>
 
         <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-4">
           <div class="w-12 h-12 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-xl">
-            <i class="fa-solid fa-diagram-project"></i>
+            <i class="fa-solid fa-robot"></i>
           </div>
           <div>
-            <div class="text-xs text-slate-400">Projects Shipped</div>
+            <div class="text-xs text-slate-400">Portfolio Capstones</div>
             <div class="text-2xl font-bold text-white" id="statProjects">0 / 4</div>
           </div>
         </div>
 
         <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-4">
           <div class="w-12 h-12 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl">
-            <i class="fa-solid fa-calendar-day"></i>
+            <i class="fa-solid fa-bolt"></i>
           </div>
           <div>
             <div class="text-xs text-slate-400">Tracker Active Since</div>
@@ -115,56 +115,56 @@
       <!-- Linear Progress Bar -->
       <div class="space-y-1.5">
         <div class="flex justify-between text-xs font-medium text-slate-400">
-          <span>Mastery Completion Bar</span>
+          <span>Curriculum Completion</span>
           <span id="progressBarLabel" class="text-indigo-400">0% Complete</span>
         </div>
         <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden border border-slate-700/50">
-          <div id="progressBar" class="bg-gradient-to-r from-indigo-500 via-violet-500 to-emerald-400 h-full w-0 transition-all duration-500 ease-out rounded-full"></div>
+          <div id="progressBar" class="bg-gradient-to-r from-indigo-500 via-purple-500 to-emerald-400 h-full w-0 transition-all duration-500 ease-out rounded-full"></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Filter & Search Toolbar -->
-  <div class="border-b border-slate-800 bg-slate-950 py-4 sticky top-[73px] z-40 backdrop-blur">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+  <div class="border-b border-slate-800 bg-slate-950 py-3 sticky top-[73px] z-40 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-3 items-center justify-between">
       
       <!-- Category Tabs -->
-      <div class="flex flex-wrap gap-1.5 p-1 bg-slate-900 border border-slate-800 rounded-xl w-full md:w-auto" id="pillarTabs">
-        <button data-pillar="all" class="tab-btn px-3 py-1.5 text-xs font-medium rounded-lg transition-all bg-indigo-600 text-white shadow-sm">
-          All Pillars
+      <div class="flex flex-wrap gap-1 p-1 bg-slate-900 border border-slate-800 rounded-xl w-full lg:w-auto" id="pillarTabs">
+        <button data-pillar="all" class="tab-btn px-2.5 py-1 text-xs font-medium rounded-lg transition-all bg-indigo-600 text-white shadow-sm">
+          All (Full Stack)
         </button>
-        <button data-pillar="backend" class="tab-btn px-3 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
-          1. Backend & Architecture
+        <button data-pillar="llm" class="tab-btn px-2.5 py-1 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
+          🧠 LLMs & Foundations
         </button>
-        <button data-pillar="data" class="tab-btn px-3 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
-          2. Data & Ontologies
+        <button data-pillar="rag" class="tab-btn px-2.5 py-1 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
+          🔍 Advanced RAG
         </button>
-        <button data-pillar="devops" class="tab-btn px-3 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
-          3. DevOps & Cloud
+        <button data-pillar="agents" class="tab-btn px-2.5 py-1 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
+          🤖 Agentic AI & Swarms
         </button>
-        <button data-pillar="ai" class="tab-btn px-3 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
-          4. Applied AI / LLM
+        <button data-pillar="realtime" class="tab-btn px-2.5 py-1 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
+          ⚡ Real-Time, Evals & Ops
         </button>
-        <button data-pillar="enterprise" class="tab-btn px-3 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
-          5. Enterprise & Security
+        <button data-pillar="engineering" class="tab-btn px-2.5 py-1 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
+          🛠 Backend & Data
         </button>
-        <button data-pillar="projects" class="tab-btn px-3 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
+        <button data-pillar="projects" class="tab-btn px-2.5 py-1 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
           🚀 Capstone Projects
         </button>
       </div>
 
       <!-- Search & Status filter -->
-      <div class="flex items-center gap-3 w-full md:w-auto">
-        <div class="relative flex-1 md:w-64">
+      <div class="flex items-center gap-2.5 w-full lg:w-auto">
+        <div class="relative flex-1 lg:w-56">
           <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-500 text-xs"></i>
-          <input type="text" id="searchInput" placeholder="Search concept, tech, or course..." class="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-900 border border-slate-800 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors">
+          <input type="text" id="searchInput" placeholder="Search concepts, tools..." class="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-900 border border-slate-800 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors">
         </div>
 
-        <select id="statusFilter" class="px-3 py-1.5 text-xs bg-slate-900 border border-slate-800 rounded-lg text-slate-300 focus:outline-none focus:border-indigo-500 transition-colors">
+        <select id="statusFilter" class="px-2.5 py-1.5 text-xs bg-slate-900 border border-slate-800 rounded-lg text-slate-300 focus:outline-none focus:border-indigo-500 transition-colors">
           <option value="all">All Status</option>
           <option value="completed">Completed Only</option>
-          <option value="remaining">Pending Learning</option>
+          <option value="remaining">Pending</option>
         </select>
       </div>
 
@@ -190,258 +190,367 @@
   <!-- Footer -->
   <footer class="border-t border-slate-900 bg-slate-950 py-6 text-center text-xs text-slate-500">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-      <p>Forward Deployed Engineer (FDE) Spec & Tracking Engine • Auto-deployed via GitHub Pages</p>
+      <p>Applied AI, LLM & Agentic Systems Tracker • Continuous Deployment via GitHub Pages</p>
       <div class="flex items-center gap-4">
         <a href="https://github.com" target="_blank" class="hover:text-slate-300 transition-colors flex items-center gap-1.5">
-          <i class="fa-brands fa-github"></i> GitHub Repo
+          <i class="fa-brands fa-github"></i> GitHub Actions CI/CD
         </a>
       </div>
     </div>
   </footer>
 
-  <!-- Script for State Management, Rendering & LocalStorage -->
+  <!-- State Management, Complete Curriculum Data & Rendering -->
   <script>
-    // 1. Comprehensive Syllabus Data Catalog
     const CURRICULUM = [
-      // PILLAR 1: Backend & Architecture
+      // ==================== DOMAIN 1: LLM CORE & FOUNDATIONS ====================
       {
-        id: "p1_python_async",
-        pillar: "backend",
-        pillarTitle: "1. Core Backend & Architecture",
-        title: "Python AsyncIO, Typing & Event Loops",
-        description: "Master modern Python typing (Pydantic v2), async/await paradigms, concurrency vs multiprocessing, generators, and context managers.",
-        tags: ["Python", "AsyncIO", "Pydantic"],
-        difficulty: "Intermediate",
+        id: "llm_transformer_internals",
+        pillar: "llm",
+        pillarTitle: "🧠 LLMs & Foundations",
+        title: "Transformer Architecture & Self-Attention",
+        description: "Self-Attention, Multi-Head Attention, Scaled Dot-Product calculation, GQA (Grouped-Query Attention), FlashAttention, and KV-cache autoregressive mechanics.",
+        tags: ["Transformers", "Attention", "KV-Cache"],
+        difficulty: "Core Theory",
         resources: [
-          { name: "ArjanCodes: Async Python Guide", url: "https://www.youtube.com/c/ArjanCodes", type: "youtube" },
-          { name: "Real Python AsyncIO Complete Guide", url: "https://realpython.com/async-io-python/", type: "docs" }
+          { name: "Andrej Karpathy: Building GPT from Scratch", url: "https://www.youtube.com/watch?v=kCc8FmEb1nY", type: "youtube" },
+          { name: "Jay Alammar: The Illustrated Transformer", url: "https://jalammar.github.io/illustrated-transformer/", type: "docs" }
         ]
       },
       {
-        id: "p1_fastapi",
-        pillar: "backend",
-        pillarTitle: "1. Core Backend & Architecture",
-        title: "FastAPI Production Architecture",
-        description: "Building production microservices with dependency injection, validation schemas, background workers, middleware, and OpenAPI specs.",
-        tags: ["FastAPI", "REST", "OpenAPI"],
-        difficulty: "Intermediate",
+        id: "llm_tokenization_context",
+        pillar: "llm",
+        pillarTitle: "🧠 LLMs & Foundations",
+        title: "Tokenization & Context Engineering",
+        description: "Byte-Pair Encoding (BPE), Tiktoken, SentencePiece, special tokens, vocab limits, and the 'Lost in the Middle' long-context attention phenomenon.",
+        tags: ["Tokenization", "BPE", "Tiktoken"],
+        difficulty: "Fundamental",
         resources: [
-          { name: "freeCodeCamp: FastAPI Full Course", url: "https://www.youtube.com/watch?v=0sOvCWFmrtA", type: "youtube" },
-          { name: "Official FastAPI Documentation", url: "https://fastapi.tiangolo.com/", type: "docs" }
+          { name: "Andrej Karpathy: Let's build the GPT Tokenizer", url: "https://www.youtube.com/watch?v=zduSFxRajkE", type: "youtube" },
+          { name: "Lost in the Middle Research Paper", url: "https://arxiv.org/abs/2307.03172", type: "docs" }
         ]
       },
       {
-        id: "p1_grpc_websockets",
-        pillar: "backend",
-        pillarTitle: "1. Core Backend & Architecture",
-        title: "gRPC, Protocol Buffers & WebSockets",
-        description: "Low-latency binary communication for inter-service RPC and bi-directional real-time telemetry streaming.",
-        tags: ["gRPC", "Protobuf", "WebSockets"],
+        id: "llm_structured_outputs",
+        pillar: "llm",
+        pillarTitle: "🧠 LLMs & Foundations",
+        title: "Structured Outputs & Constrained Decoding",
+        description: "Guaranteed JSON schemas, Pydantic model validation, Finite State Machines (FSMs), CFG grammars, and tools like Instructor and Outlines.",
+        tags: ["Structured Outputs", "Instructor", "Pydantic"],
+        difficulty: "Production Essential",
+        resources: [
+          { name: "Instructor Library Official Documentation", url: "https://python.useinstructor.com/", type: "docs" },
+          { name: "OpenAI Structured Outputs Guide", url: "https://platform.openai.com/docs/guides/structured-outputs", type: "docs" }
+        ]
+      },
+      {
+        id: "llm_finetuning_peft",
+        pillar: "llm",
+        pillarTitle: "🧠 LLMs & Foundations",
+        title: "Fine-Tuning: SFT, LoRA & QLoRA",
+        description: "Supervised Fine-Tuning dataset formatting, parameter-efficient fine-tuning (PEFT), rank decomposition math (LoRA/QLoRA), and Unsloth/Axolotl.",
+        tags: ["FineTuning", "LoRA", "QLoRA"],
         difficulty: "Advanced",
         resources: [
-          { name: "Hussein Nasser: gRPC Crash Course", url: "https://www.youtube.com/watch?v=gnchfOojMk4", type: "youtube" },
-          { name: "Official Protocol Buffers Guide", url: "https://protobuf.dev/", type: "docs" }
+          { name: "Umar Jamil: LoRA Explained Visually", url: "https://www.youtube.com/watch?v=PXOIvdI73bs", type: "youtube" },
+          { name: "Unsloth AI Fine-Tuning Guide", url: "https://docs.unsloth.ai/", type: "docs" }
         ]
       },
       {
-        id: "p1_system_design",
-        pillar: "backend",
-        pillarTitle: "1. Core Backend & Architecture",
-        title: "System Design: Caching, Queues & Resilience",
-        description: "Cache patterns (Redis write-through, cache-aside), message brokers (RabbitMQ), idempotency keys, rate limiters, and exponential backoff.",
-        tags: ["System Design", "Redis", "Resilience"],
+        id: "llm_alignment_dpo",
+        pillar: "llm",
+        pillarTitle: "🧠 LLMs & Foundations",
+        title: "Alignment: RLHF, DPO & ORPO",
+        description: "Reinforcement Learning from Human Feedback (PPO reward models) vs Direct Preference Optimization (DPO) and Odds Ratio Preference Optimization.",
+        tags: ["RLHF", "DPO", "Alignment"],
         difficulty: "Advanced",
         resources: [
-          { name: "ByteByteGo: System Design Fundamentals", url: "https://www.youtube.com/@ByteByteGo", type: "youtube" },
-          { name: "NeetCode: System Design for Beginners", url: "https://www.youtube.com/@NeetCode", type: "youtube" }
+          { name: "Hugging Face: Deep RL Course", url: "https://huggingface.co/learn/deep-rl-course", type: "docs" },
+          { name: "Direct Preference Optimization Paper", url: "https://arxiv.org/abs/2305.18290", type: "docs" }
+        ]
+      },
+      {
+        id: "llm_local_inference_vllm",
+        pillar: "llm",
+        pillarTitle: "🧠 LLMs & Foundations",
+        title: "Local Inference & Quantization (vLLM, GGUF)",
+        description: "High-throughput serving with vLLM (PagedAttention), continuous batching, quantization (AWQ, GPTQ, GGUF, 4-bit), Ollama, and llama.cpp.",
+        tags: ["vLLM", "Quantization", "Ollama"],
+        difficulty: "Systems",
+        resources: [
+          { name: "vLLM Official Documentation & Architecture", url: "https://docs.vllm.ai/", type: "docs" },
+          { name: "Ollama GitHub & Local Models", url: "https://github.com/ollama/ollama", type: "github" }
         ]
       },
 
-      // PILLAR 2: Data Engineering & Ontologies
+      // ==================== DOMAIN 2: PRODUCTION & ADVANCED RAG ====================
       {
-        id: "p2_advanced_sql",
-        pillar: "data",
-        pillarTitle: "2. Data Engineering & Ontologies",
-        title: "Advanced SQL & Analytical Window Functions",
-        description: "Master window queries (ROW_NUMBER, DENSE_RANK, LEAD/LAG), recursive CTEs, query plan diagnosis (EXPLAIN ANALYZE), and index strategies.",
-        tags: ["SQL", "Postgres", "Optimization"],
+        id: "rag_chunking_parsing",
+        pillar: "rag",
+        pillarTitle: "🔍 Advanced RAG",
+        title: "Document Parsing & Semantic Chunking",
+        description: "Recursive, token-based, and semantic boundary chunking. Parsing complex enterprise PDFs, tables, and multi-column documents with LlamaParse.",
+        tags: ["Chunking", "LlamaIndex", "Parsing"],
+        difficulty: "Core RAG",
+        resources: [
+          { name: "DeepLearning.AI: Preprocessing Unstructured Data", url: "https://www.deeplearning.ai/short-courses/preprocessing-unstructured-data-for-llm-applications/", type: "course" },
+          { name: "LlamaIndex Advanced Chunking Guide", url: "https://docs.llamaindex.ai/", type: "docs" }
+        ]
+      },
+      {
+        id: "rag_embeddings_colbert",
+        pillar: "rag",
+        pillarTitle: "🔍 Advanced RAG",
+        title: "Dense, Sparse (BM25) & ColBERT Embeddings",
+        description: "Comparing dense embeddings (OpenAI text-embedding-3, BAAI/BGE), sparse learned representations (SPLADE), and multi-vector late interaction (ColBERT).",
+        tags: ["Embeddings", "ColBERT", "BM25"],
         difficulty: "Intermediate",
+        resources: [
+          { name: "MTEB Benchmark Leaderboard", url: "https://huggingface.co/spaces/mteb/leaderboard", type: "docs" },
+          { name: "ColBERT Research Paper Explained", url: "https://arxiv.org/abs/2004.12832", type: "docs" }
+        ]
+      },
+      {
+        id: "rag_vector_stores_hybrid",
+        pillar: "rag",
+        pillarTitle: "🔍 Advanced RAG",
+        title: "Vector Storage & Hybrid Search (pgvector, Qdrant)",
+        description: "HNSW & IVF index algorithms, relational vector search in PostgreSQL (pgvector), dedicated Qdrant engines, and Reciprocal Rank Fusion (RRF).",
+        tags: ["pgvector", "Qdrant", "Hybrid Search"],
+        difficulty: "Production Essential",
+        resources: [
+          { name: "pgvector Official Documentation", url: "https://github.com/pgvector/pgvector", type: "github" },
+          { name: "Qdrant Hybrid Search & RRF Tutorial", url: "https://qdrant.tech/documentation/concepts/hybrid-queries/", type: "docs" }
+        ]
+      },
+      {
+        id: "rag_reranking_contextual",
+        pillar: "rag",
+        pillarTitle: "🔍 Advanced RAG",
+        title: "Cross-Encoder Re-Ranking & Contextual Retrieval",
+        description: "Cross-encoder re-ranking (Cohere Rerank, BGE-Reranker-Large), Anthropic Contextual Retrieval, HyDE (Hypothetical Document Embeddings), and query routing.",
+        tags: ["ReRanking", "Cohere", "Contextual"],
+        difficulty: "Advanced",
+        resources: [
+          { name: "Anthropic: Contextual Retrieval Architecture", url: "https://www.anthropic.com/news/contextual-retrieval", type: "docs" },
+          { name: "DeepLearning.AI: Building & Evaluating Advanced RAG", url: "https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/", type: "course" }
+        ]
+      },
+      {
+        id: "rag_graphrag_knowledge_graphs",
+        pillar: "rag",
+        pillarTitle: "🔍 Advanced RAG",
+        title: "Graph RAG & Knowledge Graph Extraction",
+        description: "Microsoft GraphRAG architecture: entity extraction, hierarchical community clustering (Leiden algorithm), global document summaries, and Neo4j Cypher.",
+        tags: ["GraphRAG", "Neo4j", "KnowledgeGraphs"],
+        difficulty: "Cutting Edge",
+        resources: [
+          { name: "Microsoft GraphRAG Official Repository", url: "https://github.com/microsoft/graphrag", type: "github" },
+          { name: "Neo4j GenAI & Knowledge Graph Guide", url: "https://neo4j.com/developer/genai-ecosystem/", type: "docs" }
+        ]
+      },
+      {
+        id: "rag_agentic_corrective",
+        pillar: "rag",
+        pillarTitle: "🔍 Advanced RAG",
+        title: "Agentic RAG & Corrective RAG (CRAG)",
+        description: "Self-RAG (retrieval evaluation loops), Corrective RAG (fallback to web search if retrieved documents are irrelevant), and adaptive multi-hop query routing.",
+        tags: ["Agentic RAG", "CRAG", "Self-RAG"],
+        difficulty: "Advanced",
+        resources: [
+          { name: "Corrective RAG (CRAG) Paper", url: "https://arxiv.org/abs/2401.15884", type: "docs" },
+          { name: "LangChain Agentic RAG Tutorials", url: "https://github.com/langchain-ai/rag-from-scratch", type: "github" }
+        ]
+      },
+
+      // ==================== DOMAIN 3: AGENTIC AI & MULTI-AGENT ====================
+      {
+        id: "agent_react_tool_calling",
+        pillar: "agents",
+        pillarTitle: "🤖 Agentic AI & Swarms",
+        title: "ReAct Pattern & Native Tool Calling",
+        description: "Reasoning and Acting (Thought -> Action -> Observation loops), native function calling APIs, schema registration, and tool error recovery.",
+        tags: ["ReAct", "ToolCalling", "Agents"],
+        difficulty: "Core Agent",
+        resources: [
+          { name: "ReAct Paper: Synergizing Reasoning & Acting", url: "https://arxiv.org/abs/2210.03629", type: "docs" },
+          { name: "DeepLearning.AI: Functions & Tools with LangChain", url: "https://www.deeplearning.ai/short-courses/functions-tools-agents-langchain/", type: "course" }
+        ]
+      },
+      {
+        id: "agent_memory_mem0_letta",
+        pillar: "agents",
+        pillarTitle: "🤖 Agentic AI & Swarms",
+        title: "Agent Memory Systems (Mem0 & Letta/MemGPT)",
+        description: "Short-term conversation buffers, sliding context, persistent user profile memories, and hierarchical virtual memory paging (Letta/MemGPT).",
+        tags: ["Memory", "Mem0", "MemGPT"],
+        difficulty: "Advanced",
+        resources: [
+          { name: "Mem0: The Memory Layer for AI Apps", url: "https://github.com/mem0ai/mem0", type: "github" },
+          { name: "MemGPT Research Paper", url: "https://arxiv.org/abs/2310.08560", type: "docs" }
+        ]
+      },
+      {
+        id: "agent_langgraph_cyclical",
+        pillar: "agents",
+        pillarTitle: "🤖 Agentic AI & Swarms",
+        title: "LangGraph: Cyclical State Graphs & Time-Travel",
+        description: "Multi-actor workflows with cyclical graphs, persistent state checkpoints, branching conditional edges, and human-in-the-loop pause/resume.",
+        tags: ["LangGraph", "StateGraphs", "Orchestration"],
+        difficulty: "Production Standard",
+        resources: [
+          { name: "LangChain Academy: LangGraph Course (Free)", url: "https://academy.langchain.com/", type: "course" },
+          { name: "LangGraph Official Tutorials", url: "https://langchain-ai.github.io/langgraph/", type: "docs" }
+        ]
+      },
+      {
+        id: "agent_crewai_autogen_swarms",
+        pillar: "agents",
+        pillarTitle: "🤖 Agentic AI & Swarms",
+        title: "Multi-Agent Frameworks: CrewAI, AutoGen & Swarm",
+        description: "Role-playing agents, hierarchical supervisors, choreography, worker delegated execution, and OpenAI Swarm educational patterns.",
+        tags: ["CrewAI", "AutoGen", "Swarm"],
+        difficulty: "Intermediate",
+        resources: [
+          { name: "DeepLearning.AI: Multi-Agent Systems with CrewAI", url: "https://www.deeplearning.ai/short-courses/multi-ai-agent-systems-with-crewai/", type: "course" },
+          { name: "OpenAI Swarm GitHub Repo", url: "https://github.com/openai/swarm", type: "github" }
+        ]
+      },
+      {
+        id: "agent_mcp_sandboxes",
+        pillar: "agents",
+        pillarTitle: "🤖 Agentic AI & Swarms",
+        title: "Model Context Protocol (MCP) & Sandboxes",
+        description: "Anthropic's open standard protocol for client-server tool connections, running tools inside Docker micro-sandboxes, and secure browser drivers.",
+        tags: ["MCP", "Protocol", "Sandboxing"],
+        difficulty: "Industry Standard",
+        resources: [
+          { name: "Model Context Protocol Official Documentation", url: "https://modelcontextprotocol.io/", type: "docs" },
+          { name: "Anthropic MCP GitHub Quickstarts", url: "https://github.com/modelcontextprotocol", type: "github" }
+        ]
+      },
+      {
+        id: "agent_guardrails_security",
+        pillar: "agents",
+        pillarTitle: "🤖 Agentic AI & Swarms",
+        title: "Guardrails, Prompt Injections & Safety Gates",
+        description: "Mitigating prompt injection, jailbreaks, data exfiltration, PII masking, and implementing NVIDIA NeMo Guardrails and Meta Llama Guard.",
+        tags: ["Security", "Guardrails", "OWASP"],
+        difficulty: "Enterprise",
+        resources: [
+          { name: "OWASP Top 10 for LLM Applications", url: "https://owasp.org/www-project-top-10-for-large-language-model-applications/", type: "docs" },
+          { name: "NVIDIA NeMo Guardrails Guide", url: "https://docs.nvidia.com/nemo/guardrails/", type: "docs" }
+        ]
+      },
+
+      // ==================== DOMAIN 4: REAL-TIME, EVALS & OPS ====================
+      {
+        id: "realtime_streaming_sse_ws",
+        pillar: "realtime",
+        pillarTitle: "⚡ Real-Time, Evals & Ops",
+        title: "Real-Time Streaming: SSE & WebSockets",
+        description: "Server-Sent Events (SSE) for low-latency token streaming, bi-directional WebSockets, Gemini Live API, and audio/video live streaming.",
+        tags: ["Streaming", "SSE", "WebSockets"],
+        difficulty: "Production Essential",
+        resources: [
+          { name: "MDN Web Docs: Server-sent Events", url: "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events", type: "docs" },
+          { name: "Google Gemini Live & Real-Time Cookbook", url: "https://github.com/google-gemini/cookbook", type: "github" }
+        ]
+      },
+      {
+        id: "realtime_evals_ragas_deepeval",
+        pillar: "realtime",
+        pillarTitle: "⚡ Real-Time, Evals & Ops",
+        title: "LLM & RAG Evaluations (Ragas, DeepEval, TruLens)",
+        description: "Faithfulness, Answer Relevance, Context Recall/Precision, synthetic test set generation, and LLM-as-a-Judge automated scoring.",
+        tags: ["Ragas", "DeepEval", "Evals"],
+        difficulty: "Critical",
+        resources: [
+          { name: "Ragas Framework Documentation & Tutorials", url: "https://docs.ragas.io/", type: "docs" },
+          { name: "DeepEval: Unit Testing for LLMs", url: "https://github.com/confident-ai/deepeval", type: "github" }
+        ]
+      },
+      {
+        id: "realtime_observability_langfuse",
+        pillar: "realtime",
+        pillarTitle: "⚡ Real-Time, Evals & Ops",
+        title: "AI Observability & Distributed Tracing (Langfuse)",
+        description: "Tracing multi-agent execution graphs, latency bottlenecks, token usage, cost analytics, and OpenTelemetry GenAI semantic conventions.",
+        tags: ["Langfuse", "Tracing", "OpenTelemetry"],
+        difficulty: "Production",
+        resources: [
+          { name: "Langfuse Open Source LLM Platform", url: "https://langfuse.com/docs", type: "docs" },
+          { name: "Arize Phoenix Tracing Documentation", url: "https://phoenix.arize.com/", type: "docs" }
+        ]
+      },
+      {
+        id: "realtime_caching_cost_opt",
+        pillar: "realtime",
+        pillarTitle: "⚡ Real-Time, Evals & Ops",
+        title: "Prompt Caching & Semantic Cost Optimization",
+        description: "Leveraging Anthropic/Gemini/OpenAI Prompt Caching (up to 90% cost reduction), Semantic Vector Caching with Redis/GPTCache, and token routing.",
+        tags: ["Caching", "CostOptimization", "Redis"],
+        difficulty: "Optimization",
+        resources: [
+          { name: "Anthropic Prompt Caching Guide", url: "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching", type: "docs" },
+          { name: "GPTCache Semantic Caching Library", url: "https://github.com/zilliztech/GPTCache", type: "github" }
+        ]
+      },
+
+      // ==================== DOMAIN 5: BACKEND & DATA ENGINEERING ====================
+      {
+        id: "eng_fastapi_async",
+        pillar: "engineering",
+        pillarTitle: "🛠 Backend & Data",
+        title: "Production FastAPI & Async Microservices",
+        description: "Clean architecture, Pydantic v2 schemas, dependency injection, async database connection pools, background workers, and OpenAPI specs.",
+        tags: ["FastAPI", "Python", "AsyncIO"],
+        difficulty: "Core Backend",
+        resources: [
+          { name: "freeCodeCamp FastAPI Full Course", url: "https://www.youtube.com/watch?v=0sOvCWFmrtA", type: "youtube" },
+          { name: "FastAPI Official Documentation", url: "https://fastapi.tiangolo.com/", type: "docs" }
+        ]
+      },
+      {
+        id: "eng_sql_postgres_internals",
+        pillar: "engineering",
+        pillarTitle: "🛠 Backend & Data",
+        title: "PostgreSQL Internals & Advanced SQL",
+        description: "Window functions, recursive CTEs, indexing strategies (B-Tree, GIN, BRIN), query plan diagnostics (EXPLAIN ANALYZE), and JSONB operators.",
+        tags: ["PostgreSQL", "SQL", "Databases"],
+        difficulty: "Core Data",
         resources: [
           { name: "CMU 15-445: Database Systems (Andy Pavlo)", url: "https://www.youtube.com/playlist?list=PLSE8ODhjZXjbohkNBWQs_otTrBTrJYohi", type: "youtube" },
           { name: "Use The Index, Luke (SQL Indexing)", url: "https://use-the-index-luke.com/", type: "docs" }
         ]
       },
       {
-        id: "p2_duckdb_polars",
-        pillar: "data",
-        pillarTitle: "2. Data Engineering & Ontologies",
-        title: "Embedded OLAP: DuckDB & Polars",
-        description: "High-speed in-process data crunching with Polars (Rust-backed) and DuckDB for ad-hoc analytical querying without heavy clusters.",
-        tags: ["DuckDB", "Polars", "OLAP"],
-        difficulty: "Intermediate",
+        id: "eng_duckdb_polars_olap",
+        pillar: "engineering",
+        pillarTitle: "🛠 Backend & Data",
+        title: "DuckDB & Polars: Embedded OLAP Engines",
+        description: "Lightning-fast in-memory and local analytical pipelines with Polars (Rust DataFrame) and DuckDB ad-hoc querying for massive CSV/Parquet files.",
+        tags: ["DuckDB", "Polars", "Parquet"],
+        difficulty: "Modern Data",
         resources: [
-          { name: "DuckDB Official Documentation & Tutorials", url: "https://duckdb.org/docs/", type: "docs" },
+          { name: "DuckDB Official Documentation", url: "https://duckdb.org/docs/", type: "docs" },
           { name: "Modern Data Science with Polars", url: "https://docs.pola.rs/", type: "docs" }
         ]
       },
       {
-        id: "p2_pyspark_batch",
-        pillar: "data",
-        pillarTitle: "2. Data Engineering & Ontologies",
-        title: "Distributed Computing: PySpark & Shuffling",
-        description: "Core PySpark DataFrame API, partitioning, transformations vs actions, broadcast joins, and preventing memory spill/OOMs.",
-        tags: ["PySpark", "BigData", "Distributed"],
-        difficulty: "Advanced",
+        id: "eng_docker_k8s_deployment",
+        pillar: "engineering",
+        pillarTitle: "🛠 Backend & Data",
+        title: "Docker, Kubernetes (K8s) & Cloud Deployment",
+        description: "Multi-stage Docker builds (<100MB images), Docker Compose, Kubernetes Pods/Deployments/Services/ConfigMaps, and Helm package management.",
+        tags: ["Docker", "Kubernetes", "Helm"],
+        difficulty: "DevOps",
         resources: [
-          { name: "Data Engineering Zoomcamp (Free Course)", url: "https://github.com/DataTalksClub/data-engineering-zoomcamp", type: "youtube" },
-          { name: "Spark: The Definitive Guide (Excerpts)", url: "https://spark.apache.org/docs/latest/api/python/", type: "docs" }
-        ]
-      },
-      {
-        id: "p2_ontology_modeling",
-        pillar: "data",
-        pillarTitle: "2. Data Engineering & Ontologies",
-        title: "Palantir-Style Business Ontology Modeling",
-        description: "Transforming tabular rows into unified real-world business models: Objects, Properties, Links, Relationships, and Action hooks.",
-        tags: ["Ontology", "Data Modeling", "Palantir"],
-        difficulty: "Advanced",
-        resources: [
-          { name: "Palantir Foundry: What is an Ontology?", url: "https://www.palantir.com/platforms/foundry/ontology/", type: "docs" },
-          { name: "Designing Data-Intensive Applications Summary", url: "https://github.com/ept/ddia-references", type: "github" }
+          { name: "TechWorld with Nana: Docker Course", url: "https://www.youtube.com/watch?v=3c-iBn73dDE", type: "youtube" },
+          { name: "Kunal Kushwaha: Kubernetes Course", url: "https://www.youtube.com/watch?v=KVBON1lA9N8", type: "youtube" }
         ]
       },
 
-      // PILLAR 3: DevOps & Cloud
-      {
-        id: "p3_linux_missing_semester",
-        pillar: "devops",
-        pillarTitle: "3. DevOps, Containers & Deployment",
-        title: "Linux Command Line & Scripting Mastery",
-        description: "File permissions, systemd services, SSH tunneling, process debugging, shell scripting, and network inspection tools.",
-        tags: ["Linux", "Bash", "Networking"],
-        difficulty: "Beginner",
-        resources: [
-          { name: "MIT: The Missing Semester of Your CS Education", url: "https://missing.csail.mit.edu/", type: "youtube" }
-        ]
-      },
-      {
-        id: "p3_docker_compose",
-        pillar: "devops",
-        pillarTitle: "3. DevOps, Containers & Deployment",
-        title: "Production Docker & Multi-Container Stacks",
-        description: "Multi-stage Docker builds, rootless execution, image minimization (<100MB), and Docker Compose orchestration (App + Postgres + Redis).",
-        tags: ["Docker", "Containers", "Docker Compose"],
-        difficulty: "Intermediate",
-        resources: [
-          { name: "TechWorld with Nana: Docker Full Course", url: "https://www.youtube.com/watch?v=3c-iBn73dDE", type: "youtube" }
-        ]
-      },
-      {
-        id: "p3_kubernetes_helm",
-        pillar: "devops",
-        pillarTitle: "3. DevOps, Containers & Deployment",
-        title: "Kubernetes (K8s) & Helm Deployment",
-        description: "Deploying enterprise pods, services, ConfigMaps, secrets, ingress, persistent volumes, and writing reproducible Helm charts.",
-        tags: ["Kubernetes", "Helm", "Cloud"],
-        difficulty: "Advanced",
-        resources: [
-          { name: "Kunal Kushwaha: Complete Kubernetes Course", url: "https://www.youtube.com/watch?v=KVBON1lA9N8", type: "youtube" },
-          { name: "Nana: Helm Charts Explained", url: "https://www.youtube.com/watch?v=-ykwb1d0EiU", type: "youtube" }
-        ]
-      },
-      {
-        id: "p3_terraform_ci_cd",
-        pillar: "devops",
-        pillarTitle: "3. DevOps, Containers & Deployment",
-        title: "Terraform Infrastructure as Code & GitHub Actions",
-        description: "Declarative infrastructure provisioning for AWS/GCP (VPCs, S3, IAM) and automated CI/CD deployment pipelines.",
-        tags: ["Terraform", "CI/CD", "GitHub Actions"],
-        difficulty: "Intermediate",
-        resources: [
-          { name: "freeCodeCamp: Terraform Course (Andrew Brown)", url: "https://www.youtube.com/watch?v=7xngnjfIlK4", type: "youtube" }
-        ]
-      },
-
-      // PILLAR 4: Applied AI & LLM Systems
-      {
-        id: "p4_rag_hybrid_search",
-        pillar: "ai",
-        pillarTitle: "4. Applied AI & LLM Systems",
-        title: "Enterprise RAG & Hybrid Vector Search",
-        description: "Chunking strategies, dense embeddings, vector stores (pgvector/Qdrant), sparse BM25 keyword search, and Cross-Encoder re-ranking.",
-        tags: ["RAG", "Vector DB", "Embeddings"],
-        difficulty: "Intermediate",
-        resources: [
-          { name: "DeepLearning.AI: Advanced RAG Short Course", url: "https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/", type: "docs" },
-          { name: "pgvector Official Documentation", url: "https://github.com/pgvector/pgvector", type: "github" }
-        ]
-      },
-      {
-        id: "p4_function_calling_agents",
-        pillar: "ai",
-        pillarTitle: "4. Applied AI & LLM Systems",
-        title: "LLM Function Calling & Autonomous Agents",
-        description: "Tool calling with OpenAI/Anthropic/Gemini APIs, Pydantic structured output enforcement, ReAct loops, and human-in-the-loop gates.",
-        tags: ["Function Calling", "Agents", "Pydantic"],
-        difficulty: "Intermediate",
-        resources: [
-          { name: "Full Stack LLM Bootcamp", url: "https://fullstackdeeplearning.com/llm-bootcamp/", type: "youtube" },
-          { name: "Instructor Library for Structured Outputs", url: "https://python.useinstructor.com/", type: "docs" }
-        ]
-      },
-      {
-        id: "p4_evals_guardrails",
-        pillar: "ai",
-        pillarTitle: "4. Applied AI & LLM Systems",
-        title: "AI Evaluations (Ragas/TruLens) & Guardrails",
-        description: "Measuring retrieval recall, precision, hallucination rates, faithfulness metrics, latency monitoring, and token cost tracking.",
-        tags: ["Evals", "Ragas", "Quality"],
-        difficulty: "Advanced",
-        resources: [
-          { name: "Ragas Framework Documentation", url: "https://docs.ragas.io/", type: "docs" },
-          { name: "Andrej Karpathy: Neural Networks Zero to Hero", url: "https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ", type: "youtube" }
-        ]
-      },
-
-      // PILLAR 5: Enterprise Integration & Security
-      {
-        id: "p5_oauth_rbac",
-        pillar: "enterprise",
-        pillarTitle: "5. Enterprise Integration & Security",
-        title: "Enterprise Auth: OAuth2, OIDC & RBAC",
-        description: "Securing APIs with JWT access/refresh tokens, Role-Based Access Control (RBAC), and Single Sign-On (SSO) fundamentals.",
-        tags: ["OAuth2", "Security", "RBAC"],
-        difficulty: "Intermediate",
-        resources: [
-          { name: "OAuth 2.0 and OpenID Connect in Plain English", url: "https://www.youtube.com/watch?v=996OiexHze0", type: "youtube" }
-        ]
-      },
-      {
-        id: "p5_webhooks_idempotency",
-        pillar: "enterprise",
-        pillarTitle: "5. Enterprise Integration & Security",
-        title: "Resilient Webhooks & Idempotency Engines",
-        description: "Receiving messy customer events, validating signatures, enforcing idempotency keys, and routing through dead-letter queues.",
-        tags: ["Webhooks", "Idempotency", "Queues"],
-        difficulty: "Intermediate",
-        resources: [
-          { name: "Stripe: Designing Robust Webhook Systems", url: "https://docs.stripe.com/webhooks/best-practices", type: "docs" }
-        ]
-      },
-      {
-        id: "p5_opentelemetry",
-        pillar: "enterprise",
-        pillarTitle: "5. Enterprise Integration & Security",
-        title: "Observability: OpenTelemetry, Prometheus & Grafana",
-        description: "Instrumenting distributed traces, exporting custom RED metrics (Rate, Errors, Duration), and building customer health dashboards.",
-        tags: ["OpenTelemetry", "Prometheus", "Grafana"],
-        difficulty: "Intermediate",
-        resources: [
-          { name: "TechWorld with Nana: Prometheus & Grafana", url: "https://www.youtube.com/watch?v=h4Sl21AKxDg", type: "youtube" }
-        ]
-      },
-
-      // CAPSTONE PROJECTS
+      // ==================== CAPSTONE PORTFOLIO PROJECTS ====================
       {
         id: "proj_1_ontology",
         pillar: "projects",
@@ -492,8 +601,8 @@
       }
     ];
 
-    // 2. State & Storage Management
-    const STORAGE_KEY = "fde_tracker_state_v1";
+    // Storage Key
+    const STORAGE_KEY = "fde_ai_tracker_state_v2";
 
     function loadState() {
       try {
@@ -516,7 +625,6 @@
       updateDashboard();
     }
 
-    // 3. UI Updating Logic
     let activePillar = "all";
     let searchQuery = "";
     let activeStatus = "all";
@@ -526,7 +634,6 @@
       const completedCount = Object.values(appState.completed).filter(Boolean).length;
       const percentage = Math.round((completedCount / total) * 100) || 0;
 
-      // Project count
       const projectsTotal = CURRICULUM.filter(c => c.pillar === "projects").length;
       const projectsDone = CURRICULUM.filter(c => c.pillar === "projects" && appState.completed[c.id]).length;
 
@@ -545,15 +652,12 @@
       const emptyState = document.getElementById("emptyState");
 
       const filtered = CURRICULUM.filter(item => {
-        // Pillar filter
         if (activePillar !== "all" && item.pillar !== activePillar) return false;
 
-        // Status filter
         const isDone = !!appState.completed[item.id];
         if (activeStatus === "completed" && !isDone) return false;
         if (activeStatus === "remaining" && isDone) return false;
 
-        // Search query
         if (searchQuery) {
           const text = (item.title + " " + item.description + " " + item.tags.join(" ")).toLowerCase();
           if (!text.includes(searchQuery.toLowerCase())) return false;
@@ -590,7 +694,7 @@
               <label class="cursor-pointer flex items-center gap-1.5 select-none">
                 <input type="checkbox" data-id="${item.id}" ${isDone ? 'checked' : ''} class="toggle-complete w-4 h-4 rounded border-slate-700 bg-slate-800 text-emerald-500 focus:ring-0 focus:ring-offset-0 cursor-pointer">
                 <span class="text-[11px] font-medium ${isDone ? 'text-emerald-400' : 'text-slate-400'}">
-                  ${isDone ? 'Done' : 'Mark'}
+                  ${isDone ? 'Mastered' : 'Mark'}
                 </span>
               </label>
             </div>
@@ -614,7 +718,7 @@
             <!-- Resource Links -->
             <div class="border-t border-slate-800/80 mt-4 pt-3 space-y-1.5">
               <div class="text-[11px] font-semibold text-slate-400 flex items-center gap-1">
-                <i class="fa-solid fa-graduation-cap text-indigo-400"></i> Free Study Materials:
+                <i class="fa-solid fa-graduation-cap text-indigo-400"></i> Study & Implementation Links:
               </div>
               <div class="flex flex-col gap-1">
                 ${item.resources.map(res => `
@@ -629,7 +733,6 @@
         `;
       }).join('');
 
-      // Attach checkbox listeners
       document.querySelectorAll(".toggle-complete").forEach(cb => {
         cb.addEventListener("change", (e) => {
           const id = e.target.dataset.id;
@@ -639,7 +742,7 @@
       });
     }
 
-    // 4. Filter & Search Event Listeners
+    // Tab Listeners
     document.querySelectorAll(".tab-btn").forEach(btn => {
       btn.addEventListener("click", () => {
         document.querySelectorAll(".tab-btn").forEach(b => {
@@ -664,12 +767,12 @@
       renderCards();
     });
 
-    // 5. Export / Import / Reset
+    // Export & Import
     document.getElementById("exportBtn").addEventListener("click", () => {
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appState, null, 2));
       const downloadAnchor = document.createElement("a");
       downloadAnchor.setAttribute("href", dataStr);
-      downloadAnchor.setAttribute("download", `fde_progress_${new Date().toISOString().split("T")[0]}.json`);
+      downloadAnchor.setAttribute("download", `fde_ai_progress_${new Date().toISOString().split("T")[0]}.json`);
       document.body.appendChild(downloadAnchor);
       downloadAnchor.click();
       downloadAnchor.remove();
@@ -701,7 +804,7 @@
     });
 
     document.getElementById("resetBtn").addEventListener("click", () => {
-      if (confirm("Are you sure you want to reset all your progress?")) {
+      if (confirm("Are you sure you want to reset all progress?")) {
         appState = {
           startDate: new Date().toISOString().split("T")[0],
           completed: {},
@@ -711,9 +814,7 @@
       }
     });
 
-    // Initial render
     updateDashboard();
   </script>
 </body>
 </html>
-

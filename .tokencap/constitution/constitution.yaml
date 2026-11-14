@@ -1,10 +1,10 @@
 # TokenCap Constitution Engine
-# Generated: 2026-11-13T12:30:01.363Z
+# Generated: 2026-11-14T11:20:13.487Z
 # Version: 1.2
 
 constitution:
   version: "1.2"
-  generated_at: "2026-11-13T12:30:01.363Z"
+  generated_at: "2026-11-14T11:20:13.487Z"
   rule_count: 6
 
   score:

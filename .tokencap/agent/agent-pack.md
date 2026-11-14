@@ -4,7 +4,7 @@
 > Paste this entire file into ChatGPT, Claude, Gemini, Cursor, Windsurf, Cline, Roo Code, or OpenHands
 > to give the AI agent full project intelligence before it touches any code.
 
-**Generated:** 2026-11-13T12:30:01.343Z
+**Generated:** 2026-11-14T11:20:13.465Z
 **Project:** rev_eng
 **Type:** Unknown
 

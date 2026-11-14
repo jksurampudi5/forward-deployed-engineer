@@ -1,6 +1,6 @@
 # Debug Notes
 
-<!-- Managed by TokenCap. Generated 2026-11-13T12:30:17.608Z. -->
+<!-- Managed by TokenCap. Generated 2026-11-14T11:20:13.830Z. -->
 
 ## Problem
 

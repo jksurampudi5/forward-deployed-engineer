@@ -1,4 +1,4 @@
-<!-- TokenCap v1.6 Savings: baseline 14,282 tok → actual 7,883 tok (44.8% saved) -->
+<!-- TokenCap v1.6 Savings: baseline 17,340 tok → actual 8,233 tok (52.5% saved) -->
 # AI ENTRY POINT
 
 This repository has been indexed by TokenCap.
@@ -21,12 +21,12 @@ Do not rediscover the repository from scratch.
 
 | Field | Value |
 | --- | --- |
-| Generated | 2026-11-13T12:29:35.306Z |
+| Generated | 2026-11-14T11:20:11.911Z |
 | Workspace | /Users/jayakrishna/Desktop/rev_eng |
 | Profile | balanced |
 | Selected files | 10 |
-| Source bytes | 57378 |
-| Estimated source tokens | 14282 |
+| Source bytes | 66218 |
+| Estimated source tokens | 17375 |
 
 ## Read First
 
@@ -41,13 +41,13 @@ This file is a compressed coding-session handoff. Read it before editing, then i
 
 | Field | Value |
 | --- | --- |
-| Read order | README.md > .github/workflows/deploy.yml > .gsd/PREFERENCES.md > .gsd/ROADMAP.md > .gsd/SPEC.md |
-| Primary anchors | README.md, .github/workflows/deploy.yml, .gsd/PREFERENCES.md |
-| Changed files | 0 |
+| Read order | .gsd/STATE.md > FDE_CURRICULUM_AND_ROADMAP.md > index.html > README.md > .github/workflows/deploy.yml |
+| Primary anchors | .gsd/STATE.md, FDE_CURRICULUM_AND_ROADMAP.md, index.html |
+| Changed files | 3 |
 | TODO notes | 0 |
 | File budget used | 11% |
-| Source budget used | 26% |
-| Token estimate | 14282 |
+| Source budget used | 30% |
+| Token estimate | 17375 |
 | Contents mode | enabled |
 
 ## Handoff Guidelines
@@ -61,17 +61,19 @@ This file is a compressed coding-session handoff. Read it before editing, then i
 
 | Field | Value |
 | --- | --- |
-| Branch | project/hello-world |
-| Git root | /Users/jayakrishna |
+| Branch | main |
+| Git root | /Users/jayakrishna/Desktop/rev_eng |
 
 Recent commits:
 ```text
-1315279 Deploy built files
+163e462 feat: initial FDE live tracker dashboard and CI/CD
 ```
 
 Status:
 ```text
-clean or unavailable
+ M .gsd/STATE.md
+ M FDE_CURRICULUM_AND_ROADMAP.md
+ M index.html
 ```
 
 ## Project Map
@@ -96,30 +98,369 @@ index.html
 
 | File | Bytes | Score | Why |
 | --- | ---: | ---: | --- |
+| .gsd/STATE.md | 1734 | 120 | changed |
+| FDE_CURRICULUM_AND_ROADMAP.md | 14696 | 119 | changed |
+| index.html | 40254 | 117 | changed |
 | README.md | 4401 | 105 | project-metadata, high-signal-doc |
 | .github/workflows/deploy.yml | 912 | 0 | context |
 | .gsd/PREFERENCES.md | 115 | 0 | context |
 | .gsd/ROADMAP.md | 1777 | 0 | context |
 | .gsd/SPEC.md | 1403 | 0 | context |
-| .gsd/STATE.md | 1323 | 0 | context |
 | AGENTS.md | 381 | 0 | context |
 | PROJECT_RULES.md | 545 | 0 | context |
-| FDE_CURRICULUM_AND_ROADMAP.md | 12971 | -1 | context |
-| index.html | 33550 | -2 | context |
 
 ## Changed Files
 
-No Git changes found, or this is not a Git repository.
+-  M .gsd/STATE.md
+-  M FDE_CURRICULUM_AND_ROADMAP.md
+-  M index.html
 
 ## Git Diff Snippets
 
-No diff available, or Git is unavailable.
+### Unstaged Changes Diff
+
+```diff
+// … lines 1171–1176
+ 
+     function loadState() {
+       try {
+@@ -516,7 +625,6 @@
+       updateDashboard();
+     }
+```
 
 ## TODO / FIXME / HACK Notes
 
 No TODO/FIXME/HACK notes found in selected files.
 
 ## Selected File Context
+
+### .gsd/STATE.md
+
+| Field | Value |
+| --- | --- |
+| Bytes | 1734 |
+| Score | 120 |
+| Why | changed |
+| Status | Full content |
+
+
+```markdown
+# GSD Project State: Forward Deployed Engineer (FDE) & Applied AI Track
+
+**Objective:** Complete Master Curriculum (LLMs, Advanced RAG, Agentic AI, Real-Time Systems, Evals) & Live GitHub Pages Tracker
+**Status:** 🟢 Live Interactive Dashboard & Master Syllabus Expanded
+**Current Focus:** Ready to commit & push to GitHub Pages; Begin Milestone 1
+**Updated:** 2026-11-14
+
+---
+
+## 📋 Active Tasks & Next Steps
+1. [x] Comprehensive LLM, RAG, Agentic AI & Real-Time curriculum authored ([FDE_CURRICULUM_AND_ROADMAP.md](file:[REDACTED:ENTROPY].md))
+2. [x] Interactive live dashboard updated with full AI concept cards, category filters, and study links ([index.html](file:///Users/jayakrishna/Desktop/rev_eng/index.html))
+3. [x] GitHub Actions deployment workflow active ([.github/workflows/deploy.yml](file:///Users/jayakrishna/Desktop/rev_eng/.github/workflows/deploy.yml))
+4. [ ] Commit and push changes to trigger automated GitHub Pages live rebuild
+5. [ ] Choose first implementation milestone:
+   - **Milestone 1**: Data Pipeline & Business Ontology Engine (Python, DuckDB, Postgres, FastAPI)
+   - **Milestone 2**: Enterprise RAG with Hybrid Search, Cohere Re-Ranking & RBAC (pgvector, Qdrant, Ragas)
+   - **Milestone 3**: Autonomous Multi-Agent System with LangGraph & Model Context Protocol (MCP)
+
+## 📌 Milestone Progress
+- [x] **Milestone 0: Interactive Live Tracker & Complete Syllabus** (Completed)
+- [ ] **Milestone 1: Backend & Data Ingestion (Ontology Engine)**
+- [ ] **Milestone 2: Production Enterprise RAG & Hybrid Search**
+- [ ] **Milestone 3: Agentic AI, Memory & Multi-Agent Orchestration**
+- [ ] **Milestone 4: Real-Time Streaming, Evals & Full-Stack Deployment**
+```
+
+### FDE_CURRICULUM_AND_ROADMAP.md
+
+| Field | Value |
+| --- | --- |
+| Bytes | 14696 |
+| Score | 119 |
+| Why | changed |
+| Status | Truncated (budget limit) |
+
+
+```markdown
+// … lines 1–29
+# Comprehensive Master Syllabus: Modern Applied AI, LLMs, RAG & Agentic Systems
+
+> A complete zero-to-production curriculum covering LLM internals, Advanced RAG, Multi-Agent Architectures, Real-Time Streaming, Evals, and Enterprise Deployment.
+
+---
+
+## 🗺️ Architectural Concept Map
+
+```
+flowchart TD
+    subgraph Core ["1. LLM Core & Architecture"]
+        Trans["Transformer Internals\n(Self-Attention, RoPE, KV Cache)"]
+        Token["Tokenization & Context Windows\n(BPE, Tiktoken, Lost-in-the-Middle)"]
+        Struct["Structured Outputs & Validation\n(Pydantic, Instructor, JSON Schema)"]
+        FineTune["Fine-Tuning & Alignment\n(LoRA, QLoRA, DPO, SFT)"]
+        Inference["Inference Acceleration & Local\n(vLLM, Ollama, GGUF, Quantization)"]
+    end
+
+    subgraph RAG ["2. Production & Advanced RAG"]
+        Chunk["Chunking & Preprocessing\n(Recursive, Semantic, Document Layout)"]
+        Embed["Embeddings & Representations\n(Dense, Sparse BM25/SPLADE, ColBERT)"]
+        Vect["Vector Stores & Indexing\n(pgvector, Qdrant, HNSW, Hybrid Search)"]
+        Rerank["Re-Ranking & Fusion\n(Cross-Encoders, Cohere, RRF)"]
+        AdvRAG["Contextual & Graph RAG\n(HyDE, Parent-Doc, GraphRAG, Neo4j)"]
+    end
+
+    subgraph Agents ["3. Agentic AI & Autonomous Systems"]
+        AgentCore["Core Agent Loops\n(ReAct, Plan-and-Solve, Tool Calling)"]
+        Memory["Memory Architectures\n(Short-term, Vector Episodic, Semantic, Mem0)"]
+// … lines 42–70
+    RAG --> Agents
+    Agents --> RealTime
+```
+
+---
+
+## 📚 Detailed Domain Breakdown & Where to Study
+
+---
+
+### Domain 1: LLM Core Foundations & Architecture
+
+#### 1. Transformer Architecture & Attention Deep Dive
+* **What to Learn:**
+  * Self-Attention, Multi-Head Attention, Scaled Dot-Product calculation.
+  * Modern attention variants: Grouped-Query Attention (GQA), Multi-Query Attention (MQA), FlashAttention (IO-awareness).
+  * Positional Encodings: Sinusoidal vs Rotary Position Embeddings (RoPE) vs ALiBi.
+  * KV Cache (Key-Value Cache): how generative autoregression works and memory consumption calculation.
+* **Where to Study:**
+  * 📺 [Andrej Karpathy: Let's build GPT: from scratch, in code, spelled out](https://www.youtube.com/watch?v=kCc8FmEb1nY) (YouTube)
+  * 📄 [Attention Is All You Need (Vaswani et al.)](https://arxiv.org/abs/1706.03762)
+  * 📖 [Jay Alammar: The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+
+#### 2. Tokenization & Context Windows
+* **What to Learn:**
+  * Byte-Pair Encoding (BPE), WordPiece, SentencePiece, and Tiktoken.
+  * Special tokens (`<|im_start|>`, `<|endoftext|>`), vocabulary size tradeoffs.
+  * The "Lost in the Middle" phenomenon in long context windows (128k to 2M+ tokens).
+* **Where to Study:**
+// … lines 83–111
+
+#### 4. Fine-Tuning & Parameter-Efficient Tuning (PEFT)
+* **What to Learn:**
+  * SFT (Supervised Fine-Tuning) data preparation and formatting.
+  * LoRA (Low-Rank Adaptation) and QLoRA (Quantized LoRA) mathematical intuition.
+  * Alignment algorithms: RLHF (PPO) vs DPO (Direct Preference Optimization) vs ORPO.
+* **Where to Study:**
+  * 🎓 [Hugging Face: Deep RL & Alignment Course](https://huggingface.co/learn)
+  * 📺 [Umar Jamil: LoRA (Low-Rank Adaptation) Explained Visually](https://www.youtube.com/watch?v=PXOIvdI73bs) (YouTube)
+  * 📖 [Axolotl & Unsloth Guides for Fast Fine-Tuning](https://docs.unsloth.ai/)
+
+#### 5. Local Inference Acceleration & Quantization
+* **What to Learn:**
+  * Quantization algorithms: GGUF, AWQ (Activation-aware Weight Quantization), GPTQ, BitsAndBytes (4-bit/8-bit).
+  * High-throughput serving engines: **vLLM** (PagedAttention), **TGI** (Text Generation Inference), **Ollama**, **llama.cpp**.
+  * Continuous batching, speculative decoding, chunked prefill.
+* **Where to Study:**
+  * 📖 [vLLM Official Documentation & Architecture Guide](https://docs.vllm.ai/)
+  * 💻 [Ollama GitHub & Setup](https://github.com/ollama/ollama)
+  * 📄 [PagedAttention Paper (Woosuk Kwon et al.)](https://arxiv.org/abs/2309.06180)
+
+---
+
+### Domain 2: Advanced & Production RAG
+
+#### 1. Advanced Chunking & Document Parsing
+* **What to Learn:**
+  * Fixed-size vs Recursive Character vs Token chunking.
+  * Document-structure-aware parsing (Unstructured, LlamaParse, MinerU) for tables, headers, PDFs.
+// … lines 124–152
+  * 📄 [ColBERT Paper: Efficient and Effective Passage Search via Contextualized Late Interaction](https://arxiv.org/abs/2004.12832)
+
+#### 3. Vector Storage, Indexing & Hybrid Search
+* **What to Learn:**
+  * Vector index algorithms: HNSW (Hierarchical Navigable Small World), IVF-FLAT, Product Quantization (PQ).
+  * PostgreSQL integration: **pgvector** (`vector_cosine_ops`, HNSW indexes).
+  * Dedicated engines: **Qdrant**, **Milvus**, **Chroma**.
+  * Hybrid Search: combining Dense + BM25 using Reciprocal Rank Fusion (RRF).
+* **Where to Study:**
+  * 💻 [pgvector Official GitHub & Indexing Guide](https://github.com/pgvector/pgvector)
+  * 📖 [Qdrant Hybrid Search & RRF Documentation](https://qdrant.tech/documentation/concepts/hybrid-queries/)
+
+#### 4. Re-Ranking & Context Enrichment
+* **What to Learn:**
+  * Cross-Encoders vs Bi-Encoders: trade-off between latency and accuracy.
+  * Re-ranking models: Cohere Rerank, BGE-Reranker-Large, FlashRank.
+  * Anthropic Contextual Retrieval (pre-pending document-level context to chunks before embedding).
+  * Hypothetical Document Embeddings (HyDE) and Query Expansion (Multi-Query generation).
+* **Where to Study:**
+  * 📖 [Anthropic: Introducing Contextual Retrieval](https://www.anthropic.com/news/contextual-retrieval)
+  * 🎓 [DeepLearning.AI: Building & Evaluating Advanced RAG](https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/)
+
+#### 5. Graph RAG & Knowledge Graph Traversal
+* **What to Learn:**
+  * Extracting Entities and Relationships from unstructured text using LLMs.
+  * Microsoft GraphRAG: Hierarchical community detection (Leiden algorithm) and global summaries.
+  * Graph databases: **Neo4j** (Cypher queries), graph traversals combined with vector search.
+* **Where to Study:**
+  * 💻 [Microsoft GraphRAG Official Repository & Paper](https://github.com/microsoft/graphrag)
+// … lines 165–193
+  * 📄 [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629)
+  * 📖 [Model Context Protocol (MCP) Official Documentation](https://modelcontextprotocol.io/)
+  * 🎓 [DeepLearning.AI: Functions, Tools and Agents with LangChain](https://www.deeplearning.ai/short-courses/functions-tools-agents-langchain/)
+
+#### 2. Agent Memory Architectures
+* **What to Learn:**
+  * Short-term memory: conversation buffer, summarization memory, sliding windows.
+  * Long-term memory: semantic vector retrieval, user profile stores.
+  * Modern memory frameworks: **Mem0**, **Letta (formerly MemGPT)** (virtual context paging like OS memory).
+* **Where to Study:**
+  * 💻 [Mem0: The Memory Layer for AI Applications](https://github.com/mem0ai/mem0)
+  * 📄 [MemGPT: Towards LLMs as Operating Systems](https://arxiv.org/abs/2310.08560)
+
+#### 3. Multi-Agent Orchestration Frameworks
+* **What to Learn:**
+  * State Graph Agents: **LangGraph** (cyclical graphs, persistence, state reducers, time-travel).
+  * Role-playing multi-agent systems: **CrewAI**, **AutoGen** (Microsoft).
+  * Multi-agent communication topologies: Hierarchical Supervisor, Choreography (Peer-to-Peer), Swarm.
+* **Where to Study:**
+  * 🎓 [LangChain: LangGraph Academy (Free Official Course)](https://academy.langchain.com/)
+  * 🎓 [DeepLearning.AI: Multi AI Agent Systems with crewAI](https://www.deeplearning.ai/short-courses/multi-ai-agent-systems-with-crewai/)
+  * 💻 [OpenAI Swarm GitHub (Educational Lightweight Orchestration)](https://github.com/openai/swarm)
+
+#### 4. Guardrails, Security & Human-in-the-Loop (HITL)
+* **What to Learn:**
+  * Vulnerabilities: Prompt Injections, Jailbreaking, Indirect Injections, Data exfiltration via Markdown.
+  * Guardrail systems: **NeMo Guardrails** (NVIDIA), **Llama Guard** (Meta), **Guardrails AI**.
+  * HITL: Pause-and-resume workflows, human approval gates before executing critical tools (e.g. SQL writes, API payments).
+* **Where to Study:**
+// … lines 206–234
+* **Where to Study:**
+  * 📖 [MDN Web Docs: Server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events)
+  * 📖 [OpenAI Realtime API Guide](https://platform.openai.com/docs/guides/realtime)
+  * 💻 [Google GenAI SDK Python Live Streaming](https://github.com/google-gemini/cookbook)
+
+#### 2. Evaluation Frameworks & LLM-as-a-Judge
+* **What to Learn:**
+  * RAG Triad: Context Relevance, Groundedness (Faithfulness), Answer Relevance.
+  * Automated metrics: **Ragas**, **DeepEval**, **TruLens**.
+  * Synthetic dataset generation (Testset generation from knowledge documents).
+  * G-Eval and custom rubrics using frontier models as judges.
+* **Where to Study:**
+  * 📖 [Ragas Framework Documentation & Tutorials](https://docs.ragas.io/)
+  * 💻 [DeepEval GitHub: The Evaluation Framework for LLMs](https://github.com/confident-ai/deepeval)
+  * 🎓 [DeepLearning.AI: Evaluating and Debugging Generative AI Models](https://www.deeplearning.ai/short-courses/evaluating-debugging-generative-ai/)
+
+#### 3. Observability, Tracing & Cost Optimization
+* **What to Learn:**
+  * Distributed tracing for LLM calls: **Langfuse** (open-source), **Arize Phoenix**, **LangSmith**.
+  * OpenTelemetry for Generative AI semantic conventions.
+  * Cost & Latency reduction: Prompt Caching (Anthropic / Gemini prompt caching), Semantic Caching (GPTCache / Redis).
+* **Where to Study:**
+  * 💻 [Langfuse: Open Source LLM Engineering Platform](https://langfuse.com/docs)
+  * 💻 [Arize Phoenix: AI Observability & Tracing](https://phoenix.arize.com/)
+  * 📖 [Anthropic: Prompt Caching Documentation](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)
+
+---
+
+## 🏆 Top 10 Free Comprehensive Online Courses
+
+/* …72 lines not shown — file has no detected definitions; ask for full content if needed. */
+```
+
+### index.html
+
+| Field | Value |
+| --- | --- |
+| Bytes | 40254 |
+| Score | 117 |
+| Why | changed |
+| Status | Truncated (budget limit) |
+
+**Structural Outline:**
+  - `fn loadState` (line 607)
+  - `fn saveState` (line 623)
+  - `fn updateDashboard` (line 632)
+  - `fn renderCards` (line 650)
+
+
+```html
+// … lines 1–46
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Applied AI, LLMs, RAG & Agentic Systems — Master Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#1e1b4b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-pink-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 text-white font-bold text-xl">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-indigo-300 bg-clip-text text-transparent">
+// … lines 606–611
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) return JSON.parse(raw);
+      } catch (e) {
+// … lines 622–627
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
+      updateDashboard();
+    }
+
+// … lines 631–636
+
+    function updateDashboard() {
+      const total = CURRICULUM.length;
+      const completedCount = Object.values(appState.completed).filter(Boolean).length;
+      const percentage = Math.round((completedCount / total) * 100) || 0;
+
+// … lines 649–654
+
+    function renderCards() {
+      const container = document.getElementById("cardsContainer");
+      const emptyState = document.getElementById("emptyState");
+
+      const filtered = CURRICULUM.filter(item => {
+```
 
 ### README.md
 
@@ -374,41 +715,6 @@ workflow:
 4. **`fde-ops-dashboard`**: Full-stack Next.js + FastAPI monitoring dashboard deployable via Kubernetes / Helm.
 ```
 
-### .gsd/STATE.md
-
-| Field | Value |
-| --- | --- |
-| Bytes | 1323 |
-| Score | 0 |
-| Why | context |
-| Status | Full content |
-
-
-```markdown
-# GSD Project State: Forward Deployed Engineer (FDE) Track
-
-**Objective:** FDE Zero-to-Hire Implementation Portfolio & Live GitHub Pages Tracker
-**Status:** 🟢 Live Tracker Built & Ready to Deploy
-**Current Focus:** Pushing to GitHub and launching GitHub Pages live tracking
-**Updated:** 2026-11-13
-
----
-
-## 📋 Active Tasks & Next Steps
-1. [x] Built interactive tracking dashboard with local storage persistence ([index.html](file:///Users/jayakrishna/Desktop/rev_eng/index.html))
-2. [x] Created automated GitHub Pages CI/CD workflow ([.github/workflows/deploy.yml](file:///Users/jayakrishna/Desktop/rev_eng/.github/workflows/deploy.yml))
-3. [x] Generated GitHub setup guide & repository documentation ([README.md](file:///Users/jayakrishna/Desktop/rev_eng/README.md))
-4. [ ] Push to GitHub repository and activate GitHub Pages (Instructions in README.md)
-5. [ ] Begin **Pillar 1 / Milestone 1** implementation: Core Backend & Data Ingestion Engine
-
-## 📌 Milestone Progress
-- [x] **Milestone 0: Live Tracker Dashboard & CI/CD Setup** (Completed)
-- [ ] **Milestone 1: Backend & Data Pipeline (Ontology Engine)**
-- [ ] **Milestone 2: Applied AI & Enterprise RAG System**
-- [ ] **Milestone 3: High-Throughput Webhook & Observability Gateway**
-- [ ] **Milestone 4: Full-Stack FDE Operations Dashboard & K8s Deployment**
-```
-
 ### AGENTS.md
 
 | Field | Value |
@@ -447,312 +753,4 @@ Project intelligence is generated locally in `.tokencap/`.
 2. **Context-Preserving**: Break large tasks into atomic phases to prevent context degradation and maintain high verification standards.
 3. **Continuous State Updates**: Keep `.gsd/STATE.md` updated as phases and tasks are planned, executed, and completed.
 4. **Verification Gates**: Every phase must pass explicit verification tests/audits before transitioning to the next milestone.
-```
-
-### FDE_CURRICULUM_AND_ROADMAP.md
-
-| Field | Value |
-| --- | --- |
-| Bytes | 12971 |
-| Score | -1 |
-| Why | context |
-| Status | Full content |
-
-
-```markdown
-# Forward Deployed Engineer (FDE) — Master Curriculum & Implementation Roadmap
-
-> A complete zero-to-hire syllabus, free learning catalog, and hands-on portfolio plan for aspiring Forward Deployed Engineers (FDEs).
-
----
-
-## 1. What is a Forward Deployed Engineer?
-
-A **Forward Deployed Engineer (FDE)** (pioneered by Palantir and now essential at AI/data leaders like OpenAI, Scale AI, Databricks, and Anthropic) operates at the high-impact intersection of **Software Engineering**, **Data Engineering**, **Cloud/DevOps**, and **Client Architecture**.
-
-```
-            ┌─────────────────────────────────────────┐
-            │       Forward Deployed Engineer         │
-            └────────────────────┬────────────────────┘
-                                 │
-     ┌───────────────────┬───────┴───────────┬────────────────────┐
-     ▼                   ▼                   ▼                    ▼
-┌───────────────┐ ┌───────────────┐ ┌─────────────────┐ ┌──────────────────┐
-│  Core Backend │ │     Data      │ │ Cloud, DevOps & │ │   Applied AI /   │
-│  Engineering  │ │  Engineering  │ │   Deployment    │ │   LLM Systems    │
-│ (Python/TS/Go)│ │(SQL/ETL/Spark)│ │ (Docker/K8s/IaC)│ │ (RAG/Agents/Evals│
-└───────────────┘ └───────────────┘ └─────────────────┘ └──────────────────┘
-```
-
-FDEs embed directly with customers or product deployments to:
-1. Ingest, sanitize, and model messy real-world customer data into clean schemas and business ontologies.
-2. Build custom microservices, pipelines, dashboards, and integrations connecting enterprise systems to the core platform.
-3. Deploy models and applications securely into complex environments (AWS, GCP, Azure, hybrid cloud, or air-gapped on-prem).
-4. Act as technical advisors translating ambiguous business requirements into robust, production-grade code.
-
----
-
-## 2. Complete 5-Pillar Syllabus
-
-```
-flowchart TD
-    P1["Pillar 1: Core Backend & Architecture\nPython, FastAPI, System Design, REST/gRPC"] --> P2["Pillar 2: Data Engineering & Ontologies\nAdvanced SQL, Postgres, DuckDB, Spark, Data Modeling"]
-    P2 --> P3["Pillar 3: DevOps, Containers & Cloud\nDocker, Kubernetes, AWS/GCP, Terraform, CI/CD"]
-    P3 --> P4["Pillar 4: Applied AI & Modern Stack\nRAG, Vector DBs, LangChain/LlamaIndex, Evaluations"]
-    P4 --> P5["Pillar 5: Enterprise Integration & Security\nOAuth2, OIDC, RBAC, Webhooks, API Reverse-Eng"]
-    P5 --> Port["GitHub Portfolio Capstones\n4 Production-Grade Projects"]
-```
-
----
-
-### Pillar 1: Core Backend Engineering & Software Architecture
-
-FDEs must write production-ready, clean, well-tested code fast.
-
-* **Core Language (Python - Deep Dive)**:
-  * Typing (`typing`, `Pydantic v2`), AsyncIO (`async`/`await`, event loops, concurrency vs parallelism).
-  * Generators, context managers, decorators, object-oriented design & design patterns (Factory, Strategy, Adapter).
-  * Packaging and dependency management: `uv` (modern), `Poetry`, virtual environments.
-* **Secondary Language (Pick one)**:
-  * **TypeScript/JavaScript**: Essential for building frontend dashboards or full-stack wrappers.
-  * **Go**: Highly valued for low-latency microservices and cloud tooling.
-* **API Development**:
-  * **REST APIs**: FastAPI (request validation, dependency injection, middleware, background tasks).
-  * **RPC/Streaming**: gRPC and Protocol Buffers, WebSockets for real-time telemetry.
-* **System Design & Architecture**:
-  * Microservices vs Modular Monolith, caching patterns (Redis: write-through, cache-aside), message queues (RabbitMQ, Redis Pub/Sub).
-  * Rate limiting, circuit breakers, idempotency keys, retries with exponential backoff.
-
----
-
-### Pillar 2: Data Engineering, Modeling & Ontologies
-
-At least 40% of an FDE's time is spent wrestling customer data.
-
-* **SQL Mastery**:
-  * Window functions (`ROW_NUMBER()`, `RANK()`, `LEAD()`, `LAG()`, cumulative aggregations).
-  * Common Table Expressions (CTEs), recursive CTEs.
-  * Query optimization, execution plans (`EXPLAIN ANALYZE`), indexing strategies (B-Tree, GIN, Hash).
-* **Database Systems**:
-  * Relational: **PostgreSQL** (connection pooling with PgBouncer, JSONB querying, partitioning).
-  * Analytical / Embedded OLAP: **DuckDB**, **ClickHouse**, or **Snowflake/BigQuery**.
-* **Data Processing & Pipelines**:
-  * Local/Fast: **Polars** and **Pandas** for rapid data transformations.
-  * Distributed: **PySpark** basics (DataFrame API, transformations, actions, partitions, shuffling).
-  * Orchestration: **Prefect** or **Apache Airflow** / **dbt** (data build tool) for transformation workflows.
-* **Ontology & Schema Design**:
-  * Entity-Relationship (ER) modeling, 3NF vs Star Schema / Snowflake Schema.
-  * Palantir-style Ontology concepts: mapping raw rows into real-world Objects, Properties, Links, and Actions.
-
----
-
-### Pillar 3: DevOps, Containers & Deployment
-
-FDEs deploy code into customer infrastructure. You cannot rely on a dedicated DevOps team.
-
-* **Linux Fundamentals & Shell Scripting**:
-  * Process management, permissions, systemd, environment variables, networking commands (`curl`, `netstat`, `nslookup`, `ss`).
-* **Containerization**:
-  * **Docker**: Multi-stage builds, rootless containers, volume management, networking, optimizing image sizes (<100MB).
-  * **Docker Compose**: Multi-container local environments (App + Postgres + Redis + MinIO).
-* **Container Orchestration**:
-  * **Kubernetes (K8s)**: Pods, Deployments, Services, ConfigMaps, Secrets, Ingress, Persistent Volumes.
-  * Package management: **Helm** charts basics.
-* **Cloud & Infrastructure as Code (IaC)**:
-  * Core AWS or GCP services: IAM, VPCs, S3/Cloud Storage, ECS/EKS or Cloud Run.
-  * **Terraform**: Declarative infrastructure provisioning (state management, variables, modules).
-* **CI/CD & Observability**:
-  * **GitHub Actions**: Linting, automated testing, container build & push to registries.
-  * Observability: Structured logging (`structlog`), OpenTelemetry, Prometheus & Grafana dashboard metrics.
-
----
-
-### Pillar 4: Applied AI & Enterprise LLM Systems (Modern FDE)
-
-FDEs at modern startups bridge foundation models with messy corporate databases.
-
-* **Retrieval-Augmented Generation (RAG)**:
-  * Chunking strategies (semantic, recursive, hierarchical).
-  * Embeddings models, Vector Databases (**pgvector**, **Qdrant**, or **Chroma**).
-  * Hybrid search (dense vector + sparse BM25 keyword search), Cross-encoder Re-ranking.
-* **LLM Orchestration & Structured Output**:
-  * Function Calling / Tool Calling (OpenAI / Anthropic / Gemini SDKs).
-  * Structured Outputs with Pydantic (`instructor` or native JSON schemas).
-  * Frameworks: **LangChain**, **LlamaIndex**, or minimal custom pipelines with the official SDKs.
-* **AI Agents & Enterprise Workflows**:
-  * ReAct pattern, planning loops, error recovery, human-in-the-loop approvals.
-* **Evaluation & Guardrails**:
-  * LLM evaluation frameworks: **Ragas**, **TruLens**, or custom assertion suites.
-  * Hallucination detection, latency monitoring, cost tracking (token counting).
-
----
-
-### Pillar 5: Enterprise Integration, Security & Field Engineering
-
-What distinguishes an FDE from a standard backend engineer:
-
-* **Enterprise Authentication & Access Control**:
-  * OAuth2.0 flows, OpenID Connect (OIDC), JWT tokens, SAML 2.0 overview.
-  * Role-Based Access Control (RBAC) and Attribute-Based Access Control (ABAC).
-* **API Integration & Data Extraction**:
-  * Dealing with rate limits, pagination, webhooks, error formats, unmaintained third-party APIs.
-  * Secure credential management (HashiCorp Vault, AWS Secrets Manager, `.env` hygiene).
-* **Customer Interfacing Skills**:
-  * Running technical discovery calls, writing Technical Design Documents (TDD), Scope of Work (SOW), and Architecture Diagrams.
-
----
-
-## 3. High-Quality Free Courses & Open-Source Catalog
-
-Every single topic above can be mastered through top-tier free courses:
-
-| Topic | Course / Resource | Platform | Link / Provider |
-| :--- | :--- | :--- | :--- |
-| **Linux & Tools** | The Missing Semester of Your CS Education | YouTube / Web | MIT (`missing.csail.mit.edu`) |
-| **Python & Architecture** | ArjanCodes / Corey Schafer | YouTube | Software Design Patterns in Python |
-| **FastAPI & Microservices** | FastAPI Tutorial - Building Modern Backends | YouTube | freeCodeCamp / Amigoscode |
-| **Backend & System Design** | Hussein Nasser / ByteByteGo / NeetCode | YouTube | Database internals, networking, System Design |
-| **Data Engineering** | **Data Engineering Zoomcamp** (Gold Standard) | YouTube / GitHub | DataTalks.Club (`github.com/DataTalksClub/data-engineering-zoomcamp`) |
-| **SQL & PostgreSQL** | CMU 15-445: Database Systems | YouTube / Web | Carnegie Mellon University (Andy Pavlo) |
-| **Docker & Kubernetes** | DevOps Bootcamp / TechWorld with Nana | YouTube | TechWorld with Nana |
-| **Kubernetes Deep-Dive** | Complete Kubernetes Course | YouTube | Kunal Kushwaha |
-| **Terraform & Cloud** | Terraform Associate / AWS Cloud Practitioner | YouTube | freeCodeCamp (Andrew Brown) |
-| **Applied AI & LLMs** | DeepLearning.AI Short Courses | Web | `deeplearning.ai` (Free interactive courses) |
-| **LLMs from Scratch** | Neural Networks: Zero to Hero | YouTube | Andrej Karpathy |
-| **Modern AI Systems** | Full Stack LLM Bootcamp | Web / YouTube | `fullstackdeeplearning.com` |
-
----
-
-## 4. The 4 Portfolio Capstones (Ready to Build for GitHub)
-
-To get hired as an FDE, your GitHub should prove you can integrate systems, process messy data, and deploy to real infrastructure.
-
-### Project 1: Enterprise Data Pipeline & Ontology Graph Engine
-* **Goal**: Ingest heterogeneous data (CSV/JSON/REST API), clean and normalize with Polars/DuckDB, load into PostgreSQL with a unified business ontology (Nodes, Links, Actions).
-* **Stack**: Python, FastAPI, DuckDB, PostgreSQL, Docker, dbt.
-* **Highlights**: Data validation with Great Expectations or Pydantic, automated schema migration, interactive API docs.
-
-### Project 2: Production-Ready Enterprise RAG & Semantic Search
-* **Goal**: Secure document search system for enterprise policies/documents with Role-Based Access Control (RBAC).
-* **Stack**: Python/FastAPI, pgvector or Qdrant, hybrid search (BM25 + vector), re-ranking, token cost tracking.
-* **Highlights**: Ragas evaluation suite proving precision/recall, automated ingestion pipeline for PDFs.
-
-### Project 3: Client Data Ingestion Microservice & Webhook Gateway
-* **Goal**: High-throughput webhook and batch ingestion service that handles unreliable customer data feeds, validates payloads, retries failed deliveries, and logs to OpenTelemetry.
-* **Stack**: FastAPI / Go, Redis queue, PostgreSQL, Prometheus, Grafana.
-* **Highlights**: Idempotency keys, rate limiter, dead-letter queue, live Grafana metrics dashboard.
-
-### Project 4: Full-Stack FDE Operations Dashboard with K8s Deployment
-* **Goal**: End-to-end deployed application featuring a Next.js / React management dashboard, backend API, multi-container Docker setup, and Helm charts for Kubernetes.
-* **Stack**: Next.js (TypeScript), FastAPI, Docker, Kubernetes (Minikube / Kind), GitHub Actions CI/CD.
-* **Highlights**: Complete 1-command deployment (`helm install` / `docker compose up`), comprehensive README with architecture diagram.
-
----
-
-## 5. 12-Week Execution Roadmap
-
-| Week | Focus | Hands-on Deliverable |
-| :--- | :--- | :--- |
-| **Week 1–2** | Python Mastery, FastAPI, AsyncIO, Pytest | REST API with Pydantic validation and full test suite |
-| **Week 3–4** | SQL Mastery, PostgreSQL, Data Modeling & DuckDB | Complex SQL analytical queries + data ingestion script |
-| **Week 5–6** | Docker, Docker Compose, Linux, GitHub Actions CI | Multi-container stack (API + DB + Redis) with automated CI |
-| **Week 7** | Kubernetes basics & Cloud Deployment (AWS/GCP) | Deploy containerized service to local K8s / Cloud Run |
-| **Week 8–9** | Vector Databases, Hybrid RAG, Function Calling | **Project 2 (Enterprise RAG with RBAC)** published on GitHub |
-| **Week 10** | Data Pipelines, Ontologies & dbt / Spark | **Project 1 (Ontology Data Engine)** published on GitHub |
-| **Week 11** | High-throughput Gateway & Observability | **Project 3 (Webhook Gateway + Grafana)** published on GitHub |
-| **Week 12** | Full-Stack Dashboard, System Design Mock Interviews | **Project 4 (Full-Stack Deployment)** + Resume & Outreach |
-```
-
-### index.html
-
-| Field | Value |
-| --- | --- |
-| Bytes | 33550 |
-| Score | -2 |
-| Why | context |
-| Status | Truncated (budget limit) |
-
-**Structural Outline:**
-  - `fn loadState` (line 498)
-  - `fn saveState` (line 514)
-  - `fn updateDashboard` (line 524)
-  - `fn renderCards` (line 543)
-
-
-```html
-// … lines 1–46
-<!DOCTYPE html>
-<html lang="en" class="dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forward Deployed Engineer (FDE) — Roadmap & Live Tracker</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#eef2ff',
-              100: '#e0e7ff',
-              500: '#6366f1',
-              600: '#4f46e5',
-              700: '#4338ca',
-              900: '#1e1b4b',
-            }
-          }
-        }
-      }
-    }
-  </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <style>
-    /* Custom scrollbar */
-    ::-webkit-scrollbar { width: 8px; height: 8px; }
-    ::-webkit-scrollbar-track { background: #0f172a; }
-    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #475569; }
-  </style>
-</head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
-
-  <!-- Header -->
-  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 text-white font-bold text-xl">
-          <i class="fa-solid fa-compass"></i>
-        </div>
-        <div>
-          <h1 class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-indigo-300 bg-clip-text text-transparent">
-// … lines 497–502
-
-    function loadState() {
-      try {
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if (raw) return JSON.parse(raw);
-      } catch (e) {
-// … lines 513–518
-
-    function saveState() {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
-      updateDashboard();
-    }
-
-// … lines 523–528
-
-    function updateDashboard() {
-      const total = CURRICULUM.length;
-      const completedCount = Object.values(appState.completed).filter(Boolean).length;
-      const percentage = Math.round((completedCount / total) * 100) || 0;
-
-// … lines 542–547
-
-    function renderCards() {
-      const container = document.getElementById("cardsContainer");
-      const emptyState = document.getElementById("emptyState");
-
-      const filtered = CURRICULUM.filter(item => {
 ```

@@ -1,12 +1,15 @@
 # TokenCap Memory
 
-Generated: November 13, 2026 at 06:00 PM
+Generated: November 14, 2026 at 04:50 PM
 
-**Branch:** `project/hello-world`
+**Branch:** `main`
 
 ## Current Task
 
-Working on `project/hello-world`; the working tree is clean.
+Working on `main` with 3 uncommitted files:
+- .gsd/STATE.md
+- FDE_CURRICULUM_AND_ROADMAP.md
+- index.html
 
 ## Developer Intent
 
@@ -14,7 +17,11 @@ Not inferred from local repository evidence.
 
 ## Known Issues
 
-- No failing test output or TODO/FIXME markers detected.
+- .tokencap/memory/current.md:17:- No failing test output or TODO/FIXME markers detected.
+- .tokencap/memory/dev-notes.md:15:- No failing test output or TODO/FIXME markers detected.
+- .tokencap/snapshot.md:47:| TODO notes | 0 |
+- .tokencap/snapshot.md:132:## TODO / FIXME / HACK Notes
+- .tokencap/snapshot.md:134:No TODO/FIXME/HACK notes found in selected files.
 
 ## Constraints
 
@@ -26,7 +33,9 @@ Not inferred from local repository evidence.
 
 ## Recent Changed Files
 
-_No changed files detected, or Git is unavailable._
+- .gsd/STATE.md
+- FDE_CURRICULUM_AND_ROADMAP.md
+- index.html
 
 ## Next Steps
 
