@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forward Deployed Engineer (FDE) — Roadmap & Live Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#1e1b4b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 text-white font-bold text-xl">
+          <i class="fa-solid fa-compass"></i>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-indigo-300 bg-clip-text text-transparent">
+            Forward Deployed Engineer Tracker
+          </h1>
+          <p class="text-xs text-slate-400">Zero-to-Hire Curriculum, Free Courses & Portfolio Milestones</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button id="exportBtn" class="px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-download"></i> Export Progress
+        </button>
+        <button id="importBtn" class="px-3 py-1.5 text-xs font-medium text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-upload"></i> Import
+        </button>
+        <input type="file" id="importInput" class="hidden" accept=".json">
+        <button id="resetBtn" class="px-3 py-1.5 text-xs font-medium text-red-400 hover:text-red-300 bg-red-950/30 hover:bg-red-950/60 border border-red-800/50 rounded-lg transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-rotate-left"></i> Reset
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Progress Bar & Quick Stats -->
+  <section class="border-b border-slate-800/80 bg-slate-900/40 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+        
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400">Overall Progress</div>
+            <div class="text-2xl font-bold text-white" id="statPercentage">0%</div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400">Concepts Completed</div>
+            <div class="text-2xl font-bold text-white" id="statCompleted">0 / 0</div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-diagram-project"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400">Projects Shipped</div>
+            <div class="text-2xl font-bold text-white" id="statProjects">0 / 4</div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-calendar-day"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400">Tracker Active Since</div>
+            <div class="text-sm font-semibold text-white" id="statStartDate">Today</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Linear Progress Bar -->
+      <div class="space-y-1.5">
+        <div class="flex justify-between text-xs font-medium text-slate-400">
+          <span>Mastery Completion Bar</span>
+          <span id="progressBarLabel" class="text-indigo-400">0% Complete</span>
+        </div>
+        <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden border border-slate-700/50">
+          <div id="progressBar" class="bg-gradient-to-r from-indigo-500 via-violet-500 to-emerald-400 h-full w-0 transition-all duration-500 ease-out rounded-full"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Search Toolbar -->
+  <div class="border-b border-slate-800 bg-slate-950 py-4 sticky top-[73px] z-40 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+      
+      <!-- Category Tabs -->
+      <div class="flex flex-wrap gap-1.5 p-1 bg-slate-900 border border-slate-800 rounded-xl w-full md:w-auto" id="pillarTabs">
+        <button data-pillar="all" class="tab-btn px-3 py-1.5 text-xs font-medium rounded-lg transition-all bg-indigo-600 text-white shadow-sm">
+          All Pillars
+        </button>
+        <button data-pillar="backend" class="tab-btn px-3 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
+          1. Backend & Architecture
+        </button>
+        <button data-pillar="data" class="tab-btn px-3 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
+          2. Data & Ontologies
+        </button>
+        <button data-pillar="devops" class="tab-btn px-3 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
+          3. DevOps & Cloud
+        </button>
+        <button data-pillar="ai" class="tab-btn px-3 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
+          4. Applied AI / LLM
+        </button>
+        <button data-pillar="enterprise" class="tab-btn px-3 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
+          5. Enterprise & Security
+        </button>
+        <button data-pillar="projects" class="tab-btn px-3 py-1.5 text-xs font-medium rounded-lg text-slate-400 hover:text-white transition-all">
+          🚀 Capstone Projects
+        </button>
+      </div>
+
+      <!-- Search & Status filter -->
+      <div class="flex items-center gap-3 w-full md:w-auto">
+        <div class="relative flex-1 md:w-64">
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-500 text-xs"></i>
+          <input type="text" id="searchInput" placeholder="Search concept, tech, or course..." class="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-900 border border-slate-800 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors">
+        </div>
+
+        <select id="statusFilter" class="px-3 py-1.5 text-xs bg-slate-900 border border-slate-800 rounded-lg text-slate-300 focus:outline-none focus:border-indigo-500 transition-colors">
+          <option value="all">All Status</option>
+          <option value="completed">Completed Only</option>
+          <option value="remaining">Pending Learning</option>
+        </select>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Main Content Cards List -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div id="cardsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Dynamic cards rendered by JS -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="hidden text-center py-16">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-500 text-2xl">
+        <i class="fa-solid fa-filter"></i>
+      </div>
+      <h3 class="text-base font-semibold text-slate-300">No matching concepts found</h3>
+      <p class="text-xs text-slate-500 mt-1">Try resetting your search query or filters.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-900 bg-slate-950 py-6 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p>Forward Deployed Engineer (FDE) Spec & Tracking Engine • Auto-deployed via GitHub Pages</p>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com" target="_blank" class="hover:text-slate-300 transition-colors flex items-center gap-1.5">
+          <i class="fa-brands fa-github"></i> GitHub Repo
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for State Management, Rendering & LocalStorage -->
+  <script>
+    // 1. Comprehensive Syllabus Data Catalog
+    const CURRICULUM = [
+      // PILLAR 1: Backend & Architecture
+      {
+        id: "p1_python_async",
+        pillar: "backend",
+        pillarTitle: "1. Core Backend & Architecture",
+        title: "Python AsyncIO, Typing & Event Loops",
+        description: "Master modern Python typing (Pydantic v2), async/await paradigms, concurrency vs multiprocessing, generators, and context managers.",
+        tags: ["Python", "AsyncIO", "Pydantic"],
+        difficulty: "Intermediate",
+        resources: [
+          { name: "ArjanCodes: Async Python Guide", url: "https://www.youtube.com/c/ArjanCodes", type: "youtube" },
+          { name: "Real Python AsyncIO Complete Guide", url: "https://realpython.com/async-io-python/", type: "docs" }
+        ]
+      },
+      {
+        id: "p1_fastapi",
+        pillar: "backend",
+        pillarTitle: "1. Core Backend & Architecture",
+        title: "FastAPI Production Architecture",
+        description: "Building production microservices with dependency injection, validation schemas, background workers, middleware, and OpenAPI specs.",
+        tags: ["FastAPI", "REST", "OpenAPI"],
+        difficulty: "Intermediate",
+        resources: [
+          { name: "freeCodeCamp: FastAPI Full Course", url: "https://www.youtube.com/watch?v=0sOvCWFmrtA", type: "youtube" },
+          { name: "Official FastAPI Documentation", url: "https://fastapi.tiangolo.com/", type: "docs" }
+        ]
+      },
+      {
+        id: "p1_grpc_websockets",
+        pillar: "backend",
+        pillarTitle: "1. Core Backend & Architecture",
+        title: "gRPC, Protocol Buffers & WebSockets",
+        description: "Low-latency binary communication for inter-service RPC and bi-directional real-time telemetry streaming.",
+        tags: ["gRPC", "Protobuf", "WebSockets"],
+        difficulty: "Advanced",
+        resources: [
+          { name: "Hussein Nasser: gRPC Crash Course", url: "https://www.youtube.com/watch?v=gnchfOojMk4", type: "youtube" },
+          { name: "Official Protocol Buffers Guide", url: "https://protobuf.dev/", type: "docs" }
+        ]
+      },
+      {
+        id: "p1_system_design",
+        pillar: "backend",
+        pillarTitle: "1. Core Backend & Architecture",
+        title: "System Design: Caching, Queues & Resilience",
+        description: "Cache patterns (Redis write-through, cache-aside), message brokers (RabbitMQ), idempotency keys, rate limiters, and exponential backoff.",
+        tags: ["System Design", "Redis", "Resilience"],
+        difficulty: "Advanced",
+        resources: [
+          { name: "ByteByteGo: System Design Fundamentals", url: "https://www.youtube.com/@ByteByteGo", type: "youtube" },
+          { name: "NeetCode: System Design for Beginners", url: "https://www.youtube.com/@NeetCode", type: "youtube" }
+        ]
+      },
+
+      // PILLAR 2: Data Engineering & Ontologies
+      {
+        id: "p2_advanced_sql",
+        pillar: "data",
+        pillarTitle: "2. Data Engineering & Ontologies",
+        title: "Advanced SQL & Analytical Window Functions",
+        description: "Master window queries (ROW_NUMBER, DENSE_RANK, LEAD/LAG), recursive CTEs, query plan diagnosis (EXPLAIN ANALYZE), and index strategies.",
+        tags: ["SQL", "Postgres", "Optimization"],
+        difficulty: "Intermediate",
+        resources: [
+          { name: "CMU 15-445: Database Systems (Andy Pavlo)", url: "https://www.youtube.com/playlist?list=PLSE8ODhjZXjbohkNBWQs_otTrBTrJYohi", type: "youtube" },
+          { name: "Use The Index, Luke (SQL Indexing)", url: "https://use-the-index-luke.com/", type: "docs" }
+        ]
+      },
+      {
+        id: "p2_duckdb_polars",
+        pillar: "data",
+        pillarTitle: "2. Data Engineering & Ontologies",
+        title: "Embedded OLAP: DuckDB & Polars",
+        description: "High-speed in-process data crunching with Polars (Rust-backed) and DuckDB for ad-hoc analytical querying without heavy clusters.",
+        tags: ["DuckDB", "Polars", "OLAP"],
+        difficulty: "Intermediate",
+        resources: [
+          { name: "DuckDB Official Documentation & Tutorials", url: "https://duckdb.org/docs/", type: "docs" },
+          { name: "Modern Data Science with Polars", url: "https://docs.pola.rs/", type: "docs" }
+        ]
+      },
+      {
+        id: "p2_pyspark_batch",
+        pillar: "data",
+        pillarTitle: "2. Data Engineering & Ontologies",
+        title: "Distributed Computing: PySpark & Shuffling",
+        description: "Core PySpark DataFrame API, partitioning, transformations vs actions, broadcast joins, and preventing memory spill/OOMs.",
+        tags: ["PySpark", "BigData", "Distributed"],
+        difficulty: "Advanced",
+        resources: [
+          { name: "Data Engineering Zoomcamp (Free Course)", url: "https://github.com/DataTalksClub/data-engineering-zoomcamp", type: "youtube" },
+          { name: "Spark: The Definitive Guide (Excerpts)", url: "https://spark.apache.org/docs/latest/api/python/", type: "docs" }
+        ]
+      },
+      {
+        id: "p2_ontology_modeling",
+        pillar: "data",
+        pillarTitle: "2. Data Engineering & Ontologies",
+        title: "Palantir-Style Business Ontology Modeling",
+        description: "Transforming tabular rows into unified real-world business models: Objects, Properties, Links, Relationships, and Action hooks.",
+        tags: ["Ontology", "Data Modeling", "Palantir"],
+        difficulty: "Advanced",
+        resources: [
+          { name: "Palantir Foundry: What is an Ontology?", url: "https://www.palantir.com/platforms/foundry/ontology/", type: "docs" },
+          { name: "Designing Data-Intensive Applications Summary", url: "https://github.com/ept/ddia-references", type: "github" }
+        ]
+      },
+
+      // PILLAR 3: DevOps & Cloud
+      {
+        id: "p3_linux_missing_semester",
+        pillar: "devops",
+        pillarTitle: "3. DevOps, Containers & Deployment",
+        title: "Linux Command Line & Scripting Mastery",
+        description: "File permissions, systemd services, SSH tunneling, process debugging, shell scripting, and network inspection tools.",
+        tags: ["Linux", "Bash", "Networking"],
+        difficulty: "Beginner",
+        resources: [
+          { name: "MIT: The Missing Semester of Your CS Education", url: "https://missing.csail.mit.edu/", type: "youtube" }
+        ]
+      },
+      {
+        id: "p3_docker_compose",
+        pillar: "devops",
+        pillarTitle: "3. DevOps, Containers & Deployment",
+        title: "Production Docker & Multi-Container Stacks",
+        description: "Multi-stage Docker builds, rootless execution, image minimization (<100MB), and Docker Compose orchestration (App + Postgres + Redis).",
+        tags: ["Docker", "Containers", "Docker Compose"],
+        difficulty: "Intermediate",
+        resources: [
+          { name: "TechWorld with Nana: Docker Full Course", url: "https://www.youtube.com/watch?v=3c-iBn73dDE", type: "youtube" }
+        ]
+      },
+      {
+        id: "p3_kubernetes_helm",
+        pillar: "devops",
+        pillarTitle: "3. DevOps, Containers & Deployment",
+        title: "Kubernetes (K8s) & Helm Deployment",
+        description: "Deploying enterprise pods, services, ConfigMaps, secrets, ingress, persistent volumes, and writing reproducible Helm charts.",
+        tags: ["Kubernetes", "Helm", "Cloud"],
+        difficulty: "Advanced",
+        resources: [
+          { name: "Kunal Kushwaha: Complete Kubernetes Course", url: "https://www.youtube.com/watch?v=KVBON1lA9N8", type: "youtube" },
+          { name: "Nana: Helm Charts Explained", url: "https://www.youtube.com/watch?v=-ykwb1d0EiU", type: "youtube" }
+        ]
+      },
+      {
+        id: "p3_terraform_ci_cd",
+        pillar: "devops",
+        pillarTitle: "3. DevOps, Containers & Deployment",
+        title: "Terraform Infrastructure as Code & GitHub Actions",
+        description: "Declarative infrastructure provisioning for AWS/GCP (VPCs, S3, IAM) and automated CI/CD deployment pipelines.",
+        tags: ["Terraform", "CI/CD", "GitHub Actions"],
+        difficulty: "Intermediate",
+        resources: [
+          { name: "freeCodeCamp: Terraform Course (Andrew Brown)", url: "https://www.youtube.com/watch?v=7xngnjfIlK4", type: "youtube" }
+        ]
+      },
+
+      // PILLAR 4: Applied AI & LLM Systems
+      {
+        id: "p4_rag_hybrid_search",
+        pillar: "ai",
+        pillarTitle: "4. Applied AI & LLM Systems",
+        title: "Enterprise RAG & Hybrid Vector Search",
+        description: "Chunking strategies, dense embeddings, vector stores (pgvector/Qdrant), sparse BM25 keyword search, and Cross-Encoder re-ranking.",
+        tags: ["RAG", "Vector DB", "Embeddings"],
+        difficulty: "Intermediate",
+        resources: [
+          { name: "DeepLearning.AI: Advanced RAG Short Course", url: "https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/", type: "docs" },
+          { name: "pgvector Official Documentation", url: "https://github.com/pgvector/pgvector", type: "github" }
+        ]
+      },
+      {
+        id: "p4_function_calling_agents",
+        pillar: "ai",
+        pillarTitle: "4. Applied AI & LLM Systems",
+        title: "LLM Function Calling & Autonomous Agents",
+        description: "Tool calling with OpenAI/Anthropic/Gemini APIs, Pydantic structured output enforcement, ReAct loops, and human-in-the-loop gates.",
+        tags: ["Function Calling", "Agents", "Pydantic"],
+        difficulty: "Intermediate",
+        resources: [
+          { name: "Full Stack LLM Bootcamp", url: "https://fullstackdeeplearning.com/llm-bootcamp/", type: "youtube" },
+          { name: "Instructor Library for Structured Outputs", url: "https://python.useinstructor.com/", type: "docs" }
+        ]
+      },
+      {
+        id: "p4_evals_guardrails",
+        pillar: "ai",
+        pillarTitle: "4. Applied AI & LLM Systems",
+        title: "AI Evaluations (Ragas/TruLens) & Guardrails",
+        description: "Measuring retrieval recall, precision, hallucination rates, faithfulness metrics, latency monitoring, and token cost tracking.",
+        tags: ["Evals", "Ragas", "Quality"],
+        difficulty: "Advanced",
+        resources: [
+          { name: "Ragas Framework Documentation", url: "https://docs.ragas.io/", type: "docs" },
+          { name: "Andrej Karpathy: Neural Networks Zero to Hero", url: "https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ", type: "youtube" }
+        ]
+      },
+
+      // PILLAR 5: Enterprise Integration & Security
+      {
+        id: "p5_oauth_rbac",
+        pillar: "enterprise",
+        pillarTitle: "5. Enterprise Integration & Security",
+        title: "Enterprise Auth: OAuth2, OIDC & RBAC",
+        description: "Securing APIs with JWT access/refresh tokens, Role-Based Access Control (RBAC), and Single Sign-On (SSO) fundamentals.",
+        tags: ["OAuth2", "Security", "RBAC"],
+        difficulty: "Intermediate",
+        resources: [
+          { name: "OAuth 2.0 and OpenID Connect in Plain English", url: "https://www.youtube.com/watch?v=996OiexHze0", type: "youtube" }
+        ]
+      },
+      {
+        id: "p5_webhooks_idempotency",
+        pillar: "enterprise",
+        pillarTitle: "5. Enterprise Integration & Security",
+        title: "Resilient Webhooks & Idempotency Engines",
+        description: "Receiving messy customer events, validating signatures, enforcing idempotency keys, and routing through dead-letter queues.",
+        tags: ["Webhooks", "Idempotency", "Queues"],
+        difficulty: "Intermediate",
+        resources: [
+          { name: "Stripe: Designing Robust Webhook Systems", url: "https://docs.stripe.com/webhooks/best-practices", type: "docs" }
+        ]
+      },
+      {
+        id: "p5_opentelemetry",
+        pillar: "enterprise",
+        pillarTitle: "5. Enterprise Integration & Security",
+        title: "Observability: OpenTelemetry, Prometheus & Grafana",
+        description: "Instrumenting distributed traces, exporting custom RED metrics (Rate, Errors, Duration), and building customer health dashboards.",
+        tags: ["OpenTelemetry", "Prometheus", "Grafana"],
+        difficulty: "Intermediate",
+        resources: [
+          { name: "TechWorld with Nana: Prometheus & Grafana", url: "https://www.youtube.com/watch?v=h4Sl21AKxDg", type: "youtube" }
+        ]
+      },
+
+      // CAPSTONE PROJECTS
+      {
+        id: "proj_1_ontology",
+        pillar: "projects",
+        pillarTitle: "🚀 Capstone Projects",
+        title: "Project 1: Data Pipeline & Ontology Graph Engine",
+        description: "Ingest heterogeneous data (CSV/JSON/REST), clean with Polars/DuckDB, and load into PostgreSQL with an entity-relationship ontology layer.",
+        tags: ["Project", "DuckDB", "Postgres", "FastAPI"],
+        difficulty: "Portfolio Project",
+        resources: [
+          { name: "Project Spec & Architecture Guide", url: "FDE_CURRICULUM_AND_ROADMAP.md", type: "docs" }
+        ]
+      },
+      {
+        id: "proj_2_rag",
+        pillar: "projects",
+        pillarTitle: "🚀 Capstone Projects",
+        title: "Project 2: Enterprise RAG with Hybrid Search & RBAC",
+        description: "Production-ready document search with vector embeddings, BM25 keyword matching, cross-encoder re-ranking, and automated Ragas evaluation.",
+        tags: ["Project", "RAG", "pgvector", "Evals"],
+        difficulty: "Portfolio Project",
+        resources: [
+          { name: "Project Spec & Architecture Guide", url: "FDE_CURRICULUM_AND_ROADMAP.md", type: "docs" }
+        ]
+      },
+      {
+        id: "proj_3_gateway",
+        pillar: "projects",
+        pillarTitle: "🚀 Capstone Projects",
+        title: "Project 3: High-Throughput Webhook & Observability Gateway",
+        description: "Customer ingestion gateway handling high traffic with Redis queues, dead-letter retry logic, rate limiters, and live Grafana metrics.",
+        tags: ["Project", "Redis", "Prometheus", "Grafana"],
+        difficulty: "Portfolio Project",
+        resources: [
+          { name: "Project Spec & Architecture Guide", url: "FDE_CURRICULUM_AND_ROADMAP.md", type: "docs" }
+        ]
+      },
+      {
+        id: "proj_4_dashboard",
+        pillar: "projects",
+        pillarTitle: "🚀 Capstone Projects",
+        title: "Project 4: Full-Stack FDE Ops Dashboard & K8s Deployment",
+        description: "Next.js + FastAPI monitoring dashboard deployable with a single Helm command to Kubernetes, fully automated with GitHub Actions CI/CD.",
+        tags: ["Project", "Next.js", "Kubernetes", "Helm"],
+        difficulty: "Portfolio Project",
+        resources: [
+          { name: "Project Spec & Architecture Guide", url: "FDE_CURRICULUM_AND_ROADMAP.md", type: "docs" }
+        ]
+      }
+    ];
+
+    // 2. State & Storage Management
+    const STORAGE_KEY = "fde_tracker_state_v1";
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) return JSON.parse(raw);
+      } catch (e) {
+        console.error("Failed to load local state", e);
+      }
+      return {
+        startDate: new Date().toISOString().split("T")[0],
+        completed: {},
+        notes: {}
+      };
+    }
+
+    let appState = loadState();
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
+      updateDashboard();
+    }
+
+    // 3. UI Updating Logic
+    let activePillar = "all";
+    let searchQuery = "";
+    let activeStatus = "all";
+
+    function updateDashboard() {
+      const total = CURRICULUM.length;
+      const completedCount = Object.values(appState.completed).filter(Boolean).length;
+      const percentage = Math.round((completedCount / total) * 100) || 0;
+
+      // Project count
+      const projectsTotal = CURRICULUM.filter(c => c.pillar === "projects").length;
+      const projectsDone = CURRICULUM.filter(c => c.pillar === "projects" && appState.completed[c.id]).length;
+
+      document.getElementById("statPercentage").innerText = `${percentage}%`;
+      document.getElementById("statCompleted").innerText = `${completedCount} / ${total}`;
+      document.getElementById("statProjects").innerText = `${projectsDone} / ${projectsTotal}`;
+      document.getElementById("progressBar").style.width = `${percentage}%`;
+      document.getElementById("progressBarLabel").innerText = `${percentage}% Complete (${completedCount}/${total})`;
+      document.getElementById("statStartDate").innerText = appState.startDate || "Today";
+
+      renderCards();
+    }
+
+    function renderCards() {
+      const container = document.getElementById("cardsContainer");
+      const emptyState = document.getElementById("emptyState");
+
+      const filtered = CURRICULUM.filter(item => {
+        // Pillar filter
+        if (activePillar !== "all" && item.pillar !== activePillar) return false;
+
+        // Status filter
+        const isDone = !!appState.completed[item.id];
+        if (activeStatus === "completed" && !isDone) return false;
+        if (activeStatus === "remaining" && isDone) return false;
+
+        // Search query
+        if (searchQuery) {
+          const text = (item.title + " " + item.description + " " + item.tags.join(" ")).toLowerCase();
+          if (!text.includes(searchQuery.toLowerCase())) return false;
+        }
+
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = "";
+        emptyState.classList.remove("hidden");
+        return;
+      }
+
+      emptyState.classList.add("hidden");
+
+      container.innerHTML = filtered.map(item => {
+        const isDone = !!appState.completed[item.id];
+        const isProject = item.pillar === "projects";
+
+        return `
+          <div class="relative group rounded-xl p-5 transition-all duration-200 border ${
+            isDone 
+              ? 'bg-slate-900/60 border-emerald-500/40 shadow-sm shadow-emerald-500/5' 
+              : 'bg-slate-900/90 border-slate-800 hover:border-slate-700 hover:bg-slate-900'
+          }">
+            <div class="flex items-start justify-between gap-3">
+              <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold tracking-wide uppercase ${
+                isProject ? 'bg-amber-500/10 text-amber-400 border border-amber-500/30' : 'bg-slate-800 text-slate-300 border border-slate-700'
+              }">
+                ${item.pillarTitle}
+              </span>
+
+              <label class="cursor-pointer flex items-center gap-1.5 select-none">
+                <input type="checkbox" data-id="${item.id}" ${isDone ? 'checked' : ''} class="toggle-complete w-4 h-4 rounded border-slate-700 bg-slate-800 text-emerald-500 focus:ring-0 focus:ring-offset-0 cursor-pointer">
+                <span class="text-[11px] font-medium ${isDone ? 'text-emerald-400' : 'text-slate-400'}">
+                  ${isDone ? 'Done' : 'Mark'}
+                </span>
+              </label>
+            </div>
+
+            <h3 class="text-sm font-bold text-white mt-3 group-hover:text-indigo-300 transition-colors">
+              ${item.title}
+            </h3>
+
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed line-clamp-3">
+              ${item.description}
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              ${item.tags.map(tag => `
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-800/80 text-slate-400 border border-slate-700/50">
+                  #${tag}
+                </span>
+              `).join('')}
+            </div>
+
+            <!-- Resource Links -->
+            <div class="border-t border-slate-800/80 mt-4 pt-3 space-y-1.5">
+              <div class="text-[11px] font-semibold text-slate-400 flex items-center gap-1">
+                <i class="fa-solid fa-graduation-cap text-indigo-400"></i> Free Study Materials:
+              </div>
+              <div class="flex flex-col gap-1">
+                ${item.resources.map(res => `
+                  <a href="${res.url}" target="_blank" class="inline-flex items-center justify-between text-xs text-indigo-400 hover:text-indigo-300 bg-indigo-950/20 hover:bg-indigo-950/50 px-2.5 py-1.5 rounded-lg border border-indigo-900/40 transition-colors">
+                    <span class="truncate pr-2">${res.name}</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-indigo-400"></i>
+                  </a>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Attach checkbox listeners
+      document.querySelectorAll(".toggle-complete").forEach(cb => {
+        cb.addEventListener("change", (e) => {
+          const id = e.target.dataset.id;
+          appState.completed[id] = e.target.checked;
+          saveState();
+        });
+      });
+    }
+
+    // 4. Filter & Search Event Listeners
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".tab-btn").forEach(b => {
+          b.classList.remove("bg-indigo-600", "text-white");
+          b.classList.add("text-slate-400");
+        });
+        btn.classList.add("bg-indigo-600", "text-white");
+        btn.classList.remove("text-slate-400");
+
+        activePillar = btn.dataset.pillar;
+        renderCards();
+      });
+    });
+
+    document.getElementById("searchInput").addEventListener("input", (e) => {
+      searchQuery = e.target.value.trim();
+      renderCards();
+    });
+
+    document.getElementById("statusFilter").addEventListener("change", (e) => {
+      activeStatus = e.target.value;
+      renderCards();
+    });
+
+    // 5. Export / Import / Reset
+    document.getElementById("exportBtn").addEventListener("click", () => {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appState, null, 2));
+      const downloadAnchor = document.createElement("a");
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", `fde_progress_${new Date().toISOString().split("T")[0]}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+    });
+
+    document.getElementById("importBtn").addEventListener("click", () => {
+      document.getElementById("importInput").click();
+    });
+
+    document.getElementById("importInput").addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        try {
+          const parsed = JSON.parse(event.target.result);
+          if (parsed && parsed.completed) {
+            appState = parsed;
+            saveState();
+            alert("Progress imported successfully!");
+          } else {
+            alert("Invalid JSON format.");
+          }
+        } catch (err) {
+          alert("Error parsing JSON file.");
+        }
+      };
+      reader.readAsText(file);
+    });
+
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      if (confirm("Are you sure you want to reset all your progress?")) {
+        appState = {
+          startDate: new Date().toISOString().split("T")[0],
+          completed: {},
+          notes: {}
+        };
+        saveState();
+      }
+    });
+
+    // Initial render
+    updateDashboard();
+  </script>
+</body>
+</html>
+

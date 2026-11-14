@@ -1,0 +1,41 @@
+{
+  "version": "0.8",
+  "projectName": "rev_eng",
+  "generatedAt": "2026-11-13T12:30:01.344Z",
+  "projectType": "Unknown",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "databases": [],
+    "auth": [],
+    "testing": [],
+    "buildTools": [],
+    "cloudSdks": [],
+    "payments": [],
+    "externalServices": []
+  },
+  "architecture": {
+    "style": "Modular",
+    "layers": [
+      "Modular"
+    ],
+    "clusters": [
+      {
+        "name": "Unclassified",
+        "size": 1,
+        "risk": "LOW",
+        "centralFile": "deploy.yml"
+      }
+    ],
+    "criticalChains": [],
+    "evidence": []
+  },
+  "criticalFiles": [
+    ".github/workflows/deploy.yml"
+  ],
+  "riskAreas": [],
+  "reviewGroups": [],
+  "rules": [],
+  "coreFeatures": [],
+  "agentInjectHooks": {}
+}
